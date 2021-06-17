@@ -35,6 +35,22 @@
     <p>gtm added</p>
     <p>admitad</p>
     <a href="/second.html">Second</a>
+
+    <script type="application/javascript">
+
+	    Conversify = window.Conversify || [];
+	    Conversify.api_key = "a3d0d749d9e273c75c359b745ec65e69";
+        Conversify.pagetype = "index";  // Your page type
+
+	    (function(d,e,c,cn,f,cfy,p) {
+	        f=d.cookie.split(cn)[1];f=f?f.split(';')[0]:'';
+	        p=c.product&& c.product.id?c.product.id:'';
+	        cfy=d.createElement("script");cfy.type="text/javascript";cfy.async=true;
+	        cfy.src='//js.conversify.com/v2/'+e(c.api_key)+'.js?pt='+e(c.pagetype)+'&ut='+e(f)+'&rf='+e(d.referrer||'')+'&p='+e(p);
+	        (d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(cfy);
+	    })(document, window.encodeURIComponent, Conversify, "__conversify_uid=");
+
+	</script>
 </body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6SCW6L"
