@@ -10,14 +10,13 @@
 
 
     <script>
-        // SHA-256 hash of the current user's email 'test@email.com'
-        // we strongly recommend using the standard SHA hashing
-        let hashed_customer_id = '73062D872926C2A556F17B36F50E328DDF9BFF9D403939BD14B6C3B7F5A33FC2';
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-        'transactionCustomer': hashed_customer_id, // set 'transactionCustomer': '' if the customer ID is undefined on the page
-        'suid': ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, function(c) {return (c ^(window.crypto || window.msCrypto).getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)})
-        });
+        (function (e, a, s, y) {
+            var f = e.getElementsByTagName(a)[0],
+            d = e.createElement(a);
+            d.async = true;
+            d.src = s + '/integration.js?id=' + y;
+            f.parentNode.insertBefore(d, f);
+        })(document, 'script', 'https://indivsurvey.de', 'GKWz726DkI');
     </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -26,37 +25,13 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-T6SCW6L');</script>
     <!-- End Google Tag Manager -->
-    <meta name="verify-admitad" content="672b14e575" />
-    <script type="text/javascript">
 
-        Conversify = window.Conversify || [];
-        Conversify.pagetype = "index";  // Your page type
-    
-    </script>
 </head>
 <body>
     <p>Hello, World! This is an update! Second Update!!!!</p>
     <p>My Pretty Update!!!</p>
-    <p>My Pretty Update 2!!!</p>
-    <p>gtm added</p>
-    <p>admitad</p>
-    <p>con</p>
+    <p>Easy feedback</p>
     <a href="/second.html">Second</a>
-
-    <script type="application/javascript">
-
-	    Conversify = window.Conversify || [];
-	    Conversify.api_key = "a3d0d749d9e273c75c359b745ec65e69";
-
-	    (function(d,e,c,cn,f,cfy,p) {
-	        f=d.cookie.split(cn)[1];f=f?f.split(';')[0]:'';
-	        p=c.product&& c.product.id?c.product.id:'';
-	        cfy=d.createElement("script");cfy.type="text/javascript";cfy.async=true;
-	        cfy.src='//js.conversify.com/v2/'+e(c.api_key)+'.js?pt='+e(c.pagetype)+'&ut='+e(f)+'&rf='+e(d.referrer||'')+'&p='+e(p);
-	        (d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(cfy);
-	    })(document, window.encodeURIComponent, Conversify, "__conversify_uid=");
-
-	</script>
 </body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6SCW6L"
