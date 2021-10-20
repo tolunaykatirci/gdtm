@@ -28,10 +28,9 @@
         var n=function(){if(analytics&&analytics.initialize)for(analytics.initialize({"Dreamdata.io":{apiKey:a}});window.a.length>0;){var t=window.a.shift(),n=t.shift();
             analytics[n]&&analytics[n].apply(analytics,t)}};t.addEventListener?t.addEventListener("load",function(){n()},!1):t.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||n()};
         var i=document.getElementsByTagName("script")[0];
-        var user ={"age":14, name:"damla"};
         i.parentNode.insertBefore(t,i)}},analytics.load("88f3bfa7-68ef-49a9-8881-bf17388e86ff"),
         analytics.page("purchase"), analytics.identify("123456789", { email:"damla.ulutas1@huawei.com" }),
-        analytics.trackForm("testTrackForm"),analytics.pageview("testPageView"),analytics.ab("testAB"),analytics.alias("testAlias"),analytics.ready("testReady"), analytics.track("signup"),analytics.group('GroupGroupGroup'),analytics.trackSubmit("FundaTrackSubmit"),analytics.user(user), analytics.track('formSubmitted'),analytics.track('Conferance')}();
+        analytics.user({"age":14, name:"damla"}),analytics.pageview("testPageView"),analytics.ab("testAB"),analytics.alias("testAlias"),analytics.ready("testReady"), analytics.track("signup"),analytics.group('GroupGroupGroup'),analytics.trackSubmit("FundaTrackSubmit"), analytics.track('formSubmitted'),analytics.track('Conferance')}();
     </script>
 
 
