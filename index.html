@@ -9,6 +9,17 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
  
+    <script>
+        (async () => {
+          await customElements.whenDefined('atomic-search-interface');
+          const searchInterface = document.querySelector('#search');
+          await searchInterface.initialize({
+            accessToken:'xx0837b011-f02b-464b-9bef-9ec87a3a9dd8', 
+            organizationId: 'huaweiorganizationid123456' 
+          });
+          searchInterface.executeFirstSearch();
+        })();
+      </script>
     <script src="https://static.cloud.coveo.com/searchui/v1.2537/js/CoveoJsSearch.min.js"></script>
     <script src="https://static.cloud.coveo.com/searchui/v1.2537/js/templates/templatesNew.js"></script>
     <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v1.2537/css/CoveoFullSearchNewDesign.css" />
