@@ -9,20 +9,21 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
  
+ 
+
+    <script class="coveo-script" src="https://static.cloud.coveo.com/searchui/v2.10090/js/CoveoJsSearch.Lazy.min.js"></script>
+    <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.10090/css/CoveoFullSearch.css" />
+    <script src="https://static.cloud.coveo.com/searchui/v2.10090/js/templates/templates.js"></script>
     <script>
-        (async () => {
-          await customElements.whenDefined('atomic-search-interface');
-          const searchInterface = document.querySelector('#search');
-          await searchInterface.initialize({
-            accessToken:'xx0837b011-f02b-464b-9bef-9ec87a3a9dd8', 
-            organizationId: 'test1234damla' 
-          });
-          searchInterface.executeFirstSearch();
-        })();
-      </script>
-    <script src="https://static.cloud.coveo.com/searchui/v1.2537/js/CoveoJsSearch.min.js"></script>
-    <script src="https://static.cloud.coveo.com/searchui/v1.2537/js/templates/templatesNew.js"></script>
-    <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v1.2537/css/CoveoFullSearchNewDesign.css" />
+      document.addEventListener("DOMContentLoaded", () => {
+        Coveo.SearchEndpoint.configureCloudV2Endpoint(
+          "mycoveoorganization",
+          "xx0837b011-f02b-464b-9bef-9ec87a3a9dd8"
+        );
+        Coveo.init(document.getElementById("search"));
+      })
+    </script>
+
 
 
 </head>
