@@ -8,23 +8,16 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
-    <script>
-        (async () => {
-            await customElements.whenDefined('atomic-search-interface');
-            const searchInterface = document.querySelector('#search');
-            await searchInterface.initialize({
-                accessToken: 'xx0837b011-f02b-464b-9bef-9ec87a3a9dd8',
-                organizationId: 'huaweiorganizationid123456'
-            });
-            searchInterface.executeFirstSearch();
-        })();
-    </script>
+ 
 
 
 </head>
 
 <script src="js/CoveoJsSearch.js"></script>
 <script src="js/templates/templates.js"></script>
+
+
+<!-- Each DOM element with a class starting with "Coveo" (uppercase) will instantiate a component. -->
 <body id="search" class='CoveoSearchInterface'>
 
     <!-- Each DOM element with a class starting with "coveo-" (lowercase) is strictly for CSS/alignment purpose. -->
@@ -48,9 +41,6 @@
         // It does not have to be the document body.
         Coveo.init(document.body);
     </script>
-
-
-
 </body>
 
 </html>
