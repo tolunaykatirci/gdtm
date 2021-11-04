@@ -10,15 +10,15 @@
 
     <script>
         (async () => {
-          await customElements.whenDefined('atomic-search-interface');
-          const searchInterface = document.querySelector('#search');
-          await searchInterface.initialize({
-            accessToken:'xx0837b011-f02b-464b-9bef-9ec87a3a9dd8', 
-            organizationId: 'huaweiorganizationid123456' 
-          });
-          searchInterface.executeFirstSearch();
+            await customElements.whenDefined('atomic-search-interface');
+            const searchInterface = document.querySelector('#search');
+            await searchInterface.initialize({
+                accessToken: 'xx0837b011-f02b-464b-9bef-9ec87a3a9dd8',
+                organizationId: 'huaweiorganizationid123456'
+            });
+            searchInterface.executeFirstSearch();
         })();
-      </script>
+    </script>
 
 
 </head>
@@ -55,7 +55,7 @@
         <span>1. Create a DTM project</span><br>
         <div style="background-color: cadetblue; width: 200px; height: 200px;">
             <atomic-search-interface id="search">
-                <atomic-search-box></atomic-search-box>
+                <atomic-search-box style="width: 40px; height: 40px; background-color: blue;"></atomic-search-box>
                 <atomic-facet-manager>
                     <atomic-facet field="author" label="Authors"></atomic-facet>
                     <!-- ... -->
@@ -63,6 +63,25 @@
                 <!-- ... -->
             </atomic-search-interface>
         </div>
+
+        <style>
+            atomic-result::part(result-printable-uri-list-element) {
+                text-transform: capitalize;
+            }
+
+            atomic-search-box::part(submit-button) {
+                background-color: orangered;
+            }
+
+            atomic-facet-manager {
+                padding-top: 13px;
+            }
+
+            atomic-result-list {
+                display: block;
+                margin-top: 10px;
+            }
+        </style>
 
 
 </body>
