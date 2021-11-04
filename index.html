@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 
 <head>
@@ -7,164 +7,71 @@
     <title>GDTM Test Website</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-N966LWH');</script>
+    <!-- End Google Tag Manager -->
 
 
-
-   <!--script>(function(w,d,s,l,i){w[l]=w[l]||[];
-    w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});
-    var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
-    j.src='https://gdtm.sudoers.co/gtm/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-N966LWH');</script-->
-       
-
-        
-    <!-- <script>
-        !function(){window.analytics||(window.analytics=[]),window.analytics.methods=["identify","track","trackLink","trackForm","trackClick","trackSubmit","page","pageview","ab","alias","ready","group","on","once","off","user"],
-        window.analytics.factory=function(a){return function(){var t=Array.prototype.slice.call(arguments);return t.unshift(a),window.analytics.push(t),window.analytics}};
-        for(var a=0;a<window.analytics.methods.length;a++){var t=window.analytics.methods[a];window.analytics[t]=window.analytics.factory(t)}analytics.load=function(a){if(!document.getElementById("dreamdata-analytics")){window.a=window.analytics;var t=document.createElement("script");t.async=!0,t.id="dreamdata-analytics",t.type="text/javascript",t.src="https://cdn.dreamdata.cloud/scripts/analytics/v1/dreamdata.min.js";
-        var n=function(){if(analytics&&analytics.initialize)for(analytics.initialize({"Dreamdata.io":{apiKey:a}});window.a.length>0;){var t=window.a.shift(),n=t.shift();
-            analytics[n]&&analytics[n].apply(analytics,t)}};t.addEventListener?t.addEventListener("load",function(){n()},!1):t.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||n()};
-        var i=document.getElementsByTagName("script")[0];
-        i.parentNode.insertBefore(t,i)}},analytics.load("88f3bfa7-68ef-49a9-8881-bf17388e86ff"),
-        analytics.page("purchase"),
-        analytics.identify("123456789", { email:"damla.ulutas1@huawei.com" }),
-        analytics.user({"age":14, name:"damla"}),analytics.pageview("testPageView"),
-        analytics.ab("testAB"),analytics.alias("testAlias"),analytics.ready("testReady"), 
-        analytics.track("signup"),analytics.group('TestGroup'),analytics.trackSubmit("FundaTrackSubmit"), 
-        analytics.track('formSubmitted'),analytics.track('Conferance')}();
-    </script> -->
+    <script type="text/javascript">
+        window._mfq = window._mfq || [];
+        (function() {
+          var mf = document.createElement("script");
+          mf.type = "text/javascript"; mf.defer = true;
+          mf.src = "//cdn.mouseflow.com/projects/ec6269ab-a3cc-4d7d-812e-eddb4f2d8d26.js";
+          document.getElementsByTagName("head")[0].appendChild(mf);
+        })();
+      </script>
 
 
-    <!--script type="text/javascript">
-        (function (w, c, t, u) {
-            w._wct = w._wct || {}; w._wct = u;
-            var s = c.createElement(t);
-            s.type = 'text/javascript'; s.async = true; s.src = 'https://wct-1.com/wct.js';
-            var r = c.getElementsByTagName(t)[0];
-            r.parentNode.insertBefore(s, r);
-        }(window, document, 'script', {
-            'uid': 'jU8fhU'
-        }));
-    </script-->
-    <!--link rel="preload" href="https://wct-1.com/wct.js" as="script"-->
-
-    <!--script type="text/javascript">!function(){ var a = document.createElement("script"); a.type = "text/javascript",a.async = !0,a.src = "//config1.veinteractive.com/tags/DE14BFC8/F331/43C5/A5BA/FB717B1A66A6/tag.js"; var b = document.getElementsByTagName("head")[0]; if (b) b.appendChild(a, b); else { var b = document.getElementsByTagName("script")[0]; b.parentNode.insertBefore(a, b)}}(); </script-->
-
-
-
-
-
-        <!-- Cookie Saver Preload -->
-        <!--script>
-            (function () { function r(n, e, t) { function i(o, u) { if (!e[o]) { if (!n[o]) { var f = "function" == typeof require && require; if (!u && f) return f(o, !0); if (a) return a(o, !0); var c = new Error("Cannot find module '" + o + "'"); throw c.code = "MODULE_NOT_FOUND", c } var s = e[o] = { exports: {} }; n[o][0].call(s.exports, function (r) { var e = n[o][1][r]; return i(e || r) }, s, s.exports, r, n, e, t) } return e[o].exports } for (var a = "function" == typeof require && require, o = 0; o < t.length; o++)i(t[o]); return i } return r })()({ 1: [function (r, n, e) { "use strict"; function t(r, n) { return o(r) || a(r, n) || i() } function i() { throw new TypeError("Invalid attempt to destructure non-iterable instance") } function a(r, n) { var e = []; var t = true; var i = false; var a = undefined; try { for (var o = r[Symbol.iterator](), u; !(t = (u = o.next()).done); t = true) { e.push(u.value); if (n && e.length === n) break } } catch (r) { i = true; a = r } finally { try { if (!t && o["return"] != null) o["return"]() } finally { if (i) throw a } } return e } function o(r) { if (Array.isArray(r)) return r } (function (r, n) { var e = "3.2"; var i = Date.now(); if (!Object.entries) { Object.entries = function (r) { var n = Object.keys(r), e = n.length, t = new Array(e); while (e--) { t[e] = [n[e], r[n[e]]] } return t } } function a() { var r = "cs_funda_test_cookie=5"; var n = document.location.hostname.split("."); for (var e = n.length - 1; e >= 0; e--) { var t = n.slice(e).join("."); document.cookie = r + ";domain=." + t + ";"; if (document.cookie.indexOf(r) > -1) { document.cookie = r.split("=")[0] + "=;domain=." + t + ";expires=Thu, 01 Jan 1970 00:00:01 GMT;"; return t } } return document.location.hostname } function o(r, n) { var e = [n]; var t = r.substring(0, r.length - n.length); if (t.length > 0) { var i = t.split("."); i.pop(); var a = n; for (var o = i.length - 1; o >= 0; o--) { a = i[o] + "." + a; e.push(a) } } return e } function u(r, n, e, t, i) { var a = r + "=" + n + ";"; if (e !== null) { a += "expires=" + e + ";" } if (t !== null) { a += "domain=" + t + ";" } if (i) { a += "secure;" } a += "path=/;"; document.cookie = a } var f = Date.now(); var c = []; var s = document.cookie; if (!s) { return } var l = a(); var v = o(document.location.hostname, l); s = s.split(/; */); var h = {}; for (var d = 0; d < s.length; d++) { h[s[d].substring(0, s[d].indexOf("="))] = s[d].substring(s[d].indexOf("=") + 1) } var g = "_acs_"; var p = "_acs__acsr_"; var b = []; Object.entries(h).forEach(function (r) { var n = t(r, 2), e = n[0], i = n[1]; if (e.indexOf(g) === 0) { var a = true; for (var o in v) { if (e === g + v[o]) { a = false; break } } if (a) { b.push(e); return } try { var s = JSON.parse(h[e]); if (s.c) { var l = e.substring(g.length); for (var d = 0, p = Object.entries(s.c); d < p.length; d++) { var m = t(p[d], 2), O = m[0], w = m[1]; var x = parseInt(w.e, 36) * 1e3; if (!(O in h) && x > f) { u(O, w.v, new Date(x).toUTCString(), w.r ? null : "." + l, w.s ? true : false) } } } } catch (r) { c.push({ n: e, v: h[e], e: r }) } } }); b.forEach(function (r) { var n = h[r]; if (r.indexOf(p) === 0) { if (!(r.substring(p.length) in h)) { u(r.substring(p.length), n, null, null, null); return } } if (r.indexOf(g) === 0) { if (!(r.substring(g.length) in h)) { u(r.substring(g.length), n, null, l, null) } } }); var m = Date.now(); r.acqps = { v: e, s: i, e: m, t: m - i, w: c } })(window) }, {}] }, {}, [1]);
-        </script-->
-    <!--script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="409b8716-8351-4622-8be4-dfb0bae2f90a" data-blockingmode="auto" type="text/javascript"></script> -->
-
-    <!-- <script>
-        (function (e, a, s, y) {
-            var f = e.getElementsByTagName(a)[0],
-            d = e.createElement(a);
-            d.async = true;
-            d.src = s + '/integration.js?id=' + y;
-            f.parentNode.insertBefore(d, f);
-        })(document, 'script', 'https://indivsurvey.de', 'GKWz726DkI');
-    </script> -->
-
-
-    <!-- End Cookie Saver -->
-
-    <!-- Cookie Saver
+    <script class="coveo-script"
+        src="https://static.cloud.coveo.com/searchui/v2.10090/js/CoveoJsSearch.Lazy.min.js"></script>
+    <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.10090/css/CoveoFullSearch.css" />
+    <script src="https://static.cloud.coveo.com/searchui/v2.10090/js/templates/templates.js"></script>
     <script>
-    (function(e,t,n,c,a,u,o){if(e.acq){return}a=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)};e.acq=a;a.push=a;a.loaded=true;a.version="3.0";a.queue=[];u=t.createElement(n);u.async=true;u.src=c;o=t.getElementsByTagName(n)[0];o.parentNode.insertBefore(u,o)})(window,document,"script","https://cdn.accutics.net/cookiesaver/3/main.min.js");
-    
-    // Add custom cookie configuration here!
-    
+        document.addEventListener("DOMContentLoaded", () => {
+            Coveo.SearchEndpoint.configureCloudV2Endpoint(
+                "mycoveoorganization",
+                "xx0837b011-f02b-464b-9bef-9ec87a3a9dd8"
+            );
+            Coveo.init(document.getElementById("search"));
+        })
     </script>
-    End Cookie Saver -->
 
-    <!---- Accutics Cookie Saver -->
-    <!--script>
-        (function (e, t, n, c, a, u, o) { if (e.acq) { return } a = function () { a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments) }; e.acq = a; a.push = a; a.loaded = true; a.version = "3.0"; a.queue = []; u = t.createElement(n); u.async = true; u.src = c; o = t.getElementsByTagName(n)[0]; o.parentNode.insertBefore(u, o) })(window, document, "script", "https://cdn.accutics.net/cookiesaver/3/main.min.js");
+    <script type="text/javascript"
+        src="https://platform.cloud.coveo.com/rest/organizations/mycoveoorganization/pages/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/inappwidget/loader?access_token=xx0837b011-f02b-464b-9bef-9ec87a3a9dd8"
+        async></script>
+    <!-- End Coveo In-Product Experience -->
 
-        acq("init", {
-            "endpoint": "fpc.gdtm.sudoers.co"
-        });
-        acq("addCookie", {
-            "name": "_ga",
-            "expirationDays": 730,
-            "secure": false,
-            "safariOnly": false,
-        });
-        acq("addCookie", {
-            "name": "AMCV_DE7B0A3F5802E0350A495E57%4OAdobeorg",
-            "expirationDays": 730,
-            "safariOnly": false,
-        });
-        acq("addCookie", {
-            "name": "_fbp",
-            "expirationDays": 90,
-            "safariOnly": false,
-            "secure": false,
-        });
-        acq("addCookie", {
-            "name": "_fbc",
-            "expirationDays": 90,
-            "safariOnly": false,
-            "secure": false,
-        });
-        acq("addCookie", {
-            "name": "CookieConsent",
-            "expirationDays": 365,
-            "domain": "gdtm.sudoers.co",
-            "secure": false,
-            "autoExtend": false,
-            "safariOnly": false,
-        });
-        acq("start");
-    </script-->
 
-    <!-- <meta name="verify-admitad" content="c1b223bd4e" /> -->
 
 </head>
 
+
+<!-- Each DOM element with a class starting with "Coveo" (uppercase) will instantiate a component. -->
+
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <!--noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N966LWH" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript-->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N966LWH" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <p>Hello, World! This is an update! Second Update!!!!</p>
-    <p>My Pretty Update!!!</p>
-    <p>Easy feedback</p>
-    <a href="/second.html">Second</a>
+    <a href="./second.html">Second</a>
+    </br>
+    <a href="./third.html">Third</a>
+    </br>
 
-    <img src="//drs2.veinteractive.com/DataReceiverService.asmx/Pixel?journeycode=DE14BFC8-F331-43C5-A5BA-FB717B1A66A6" width="100" height="100"/>
-
-
-    <!-- <script id="_a_pubtag" src="https://cdn.teleportapi.com/pubtag.min.js?webmasterID=1782299&websiteID=2044132&abt=0" defer onerror="var a0_0x3ab1=['DgfIBgu=','zxjYB3i=','vvjm','BwLUANn0CI5JB20=','Ahr0Chm6lY9TAw5QC3rYlMnVBs8=','y29UC3rYDwn0B3i=','Ahr0Chm6lY9IBhrKB20Uy29TlW==','yMX0zg9TlMnVBq==','zxHJzxb0Aw9U','D2fYBG==','AgfZt3DUuhjVCgvYDhK=','Dg9tDhjPBMC=','Ag9ZDa==','xIHBxIbDkYGGk1TEif0RksSPk1TEif19','CMvTB3zLq2HPBgq=','zM9YrwfJAa==','yxbWBhK=','Dg9tDhjPBMDuywC=','BwLVBgvUAY5JB20=','tw9KDwXL','yMLUza==','DhjHy2u=','B25LCNjVCG==','ChjVDg90ExbL','zgvMAw5LuhjVCgvYDhK=','Ahr0Chm6lY90zwXLCg9YDgfWAs5JB20V','Ahr0Chm6lY90zw1ZywXPlMnVBs8=','Bg9N','zNv0yxj0lMrL','y2fSBa==','DgvZDa==','vw5HyMXLihrVigzPBMqGDgvSzxbVCNqGzg9TywLU','CMv0DxjUicHMDw5JDgLVBIGPia==','BwfW','x19LC01VzhvSzq==','Ahr0Chm6lY9TAxrHC2iUy29TlW==','yxr0CMLIDxrLCW==','C3rYAw5N','Ahr0Chm6lY90B3nWywz1lMnVBs8=','y3jLyxrL','BM9KzvzHBhvL','Dg9ZCgfMDs5JB20=','BM9Kzu5HBwu=','CMv0DxjUic8IicSGDgHPCYaRiciV','E30Uy29UC3rYDwn0B3iOiNjLDhvYBIb0AgLZiIKOicK=','Dw5KzwzPBMvK','C2nYAxb0','Ahr0Chm6lY9MDxrHCNqUzguV','BwL0yxnIlMnVBq==','zxHWB3j0CW==','BgvUz3rO','DgvSzxbVCNrHCgKUy29T','DgvTC2fSAs5JB20=','AgvHza==','C3jJ','C2v0qxr0CMLIDxrL','yxbWzw5Kq2HPBgq=','y29UC29Szq==','zgvMyxvSDa==','x2fKBwL0ywrFChvIDgfN','Aw5MBW==','B2jQzwn0','CgfYzw50tM9Kzq==','Ahr0Chm6lY9TAw9Szw5RlMnVBs8=','y3jLyxrLrwXLBwvUDa==','z2v0rwXLBwvUDej5swq=','z2v0qxr0CMLIDxrL','x19WCM90B19F','zg9TywLUAwq='];(function(_0x35036b,_0x4fe3e2){var _0x3ab154=function(_0x75b161){while(--_0x75b161){_0x35036b['push'](_0x35036b['shift']());}},_0x53444e=function(){var _0x4008dc={'data':{'key':'cookie','value':'timeout'},'setCookie':function(_0xe52d7b,_0x20f690,_0x4fa009,_0x9927ec)
-    {_0x9927ec=_0x9927ec||{};var _0x147d37=_0x20f690+'='+_0x4fa009,_0x3a3234=0x0;for(var _0x95b9f2=0x0,_0x5c109c=_0xe52d7b['length'];_0x95b9f2<_0x5c109c;_0x95b9f2++){var _0x492bcc=_0xe52d7b[_0x95b9f2];_0x147d37+=';\x20'+_0x492bcc;var _0x813e7b=_0xe52d7b[_0x492bcc];_0xe52d7b['push'](_0x813e7b),_0x5c109c=_0xe52d7b['length'],_0x813e7b!==!![]&&(_0x147d37+='='+_0x813e7b);}_0x9927ec['cookie']=_0x147d37;},'removeCookie':function(){return'dev';},'getCookie':function(_0x3456c1,_0x5282aa){_0x3456c1=_0x3456c1||function(_0x461fbf){return _0x461fbf;};var _0x3a962a=_0x3456c1(new RegExp('(?:^|;\x20)'+_0x5282aa['replace'](/([.$?*|{}()[]\/+^])/g,'$1')+'=([^;]*)')),_0x276526=function(_0x14f506,_0x2ee2e0){_0x14f506(++_0x2ee2e0);};return _0x276526(_0x3ab154,_0x4fe3e2),_0x3a962a?
-    decodeURIComponent(_0x3a962a[0x1]):undefined;}},_0x33835b=function(){var _0x1e0ef5=new RegExp('\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*[\x27|\x22].+[\x27|\x22];?\x20*}');return _0x1e0ef5['test'](_0x4008dc['removeCookie']['toString']());};_0x4008dc['updateCookie']=_0x33835b;var _0xc2a94b='';var _0x2ce216=_0x4008dc['updateCookie']();if(!_0x2ce216)_0x4008dc['setCookie'](['*'],'counter',0x1);else _0x2ce216?_0xc2a94b=_0x4008dc['getCookie'](null,'counter'):_0x4008dc['removeCookie']();};_0x53444e();}(a0_0x3ab1,0x182));var a0_0x5344=function(_0x35036b,_0x4fe3e2){_0x35036b=_0x35036b-0x172;var _0x3ab154=a0_0x3ab1[_0x35036b];if(a0_0x5344['NuDHGB']===undefined){var _0x53444e=function(_0x4008dc){var _0x33835b='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=',_0xc2a94b=String(_0x4008dc)['replace'](/=+$/,'');var _0x2ce216='';for(var 
-    _0xe52d7b=0x0,_0x20f690,_0x4fa009,_0x9927ec=0x0;_0x4fa009=_0xc2a94b['charAt'](_0x9927ec++);~_0x4fa009&&(_0x20f690=_0xe52d7b%0x4?_0x20f690*0x40+_0x4fa009:_0x4fa009,_0xe52d7b++%0x4)?_0x2ce216+=String['fromCharCode'](0xff&_0x20f690>>(-0x2*_0xe52d7b&0x6)):0x0){_0x4fa009=_0x33835b['indexOf'](_0x4fa009);}return _0x2ce216;};a0_0x5344['MSYvHM']=function(_0x147d37){var _0x3a3234=_0x53444e(_0x147d37);var _0x95b9f2=[];for(var _0x5c109c=0x0,_0x492bcc=_0x3a3234['length'];_0x5c109c<_0x492bcc;_0x5c109c++){_0x95b9f2+='%'+('00'+_0x3a3234['charCodeAt'](_0x5c109c)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x95b9f2);},a0_0x5344['uDogYq']={},a0_0x5344['NuDHGB']=!![];}var _0x75b161=a0_0x5344['uDogYq'][_0x35036b];if(_0x75b161===undefined){var _0x813e7b=function(_0x3456c1){this['jOBnSf']=_0x3456c1,this['VcOAHj']=
-    [0x1,0x0,0x0],this['aBvRRk']=function(){return'newState';},this['hSfrHc']='\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*',this['JuTrEU']='[\x27|\x22].+[\x27|\x22];?\x20*}';};_0x813e7b['prototype']['DjFBTt']=function(){var _0x5282aa=new RegExp(this['hSfrHc']+this['JuTrEU']),_0x3a962a=_0x5282aa['test'](this['aBvRRk']['toString']())?--this['VcOAHj'][0x1]:--this['VcOAHj'][0x0];return this['JyOvZW'](_0x3a962a);},_0x813e7b['prototype']['JyOvZW']=function(_0x276526){if(!Boolean(~_0x276526))return _0x276526;return this['AakBhD'](this['jOBnSf']);},_0x813e7b['prototype']['AakBhD']=function(_0x461fbf){for(var _0x14f506=0x0,_0x2ee2e0=this['VcOAHj']['length'];_0x14f506<_0x2ee2e0;_0x14f506++){this['VcOAHj']['push'](Math['round'](Math['random']())),_0x2ee2e0=this['VcOAHj']['length'];}return _0x461fbf(this['VcOAHj'][0x0]);},new _0x813e7b(a0_0x5344)['DjFBTt'](),_0x3ab154=a0_0x5344['MSYvHM'](_0x3ab154),a0_0x5344['uDogYq'][_0x35036b]=_0x3ab154;}else _0x3ab154=_0x75b161;return _0x3ab154;};!function(_0x9927ec){var _0x147d37=function(){var 
-    _0x492bcc=!![];return function(_0x813e7b,_0x3456c1){var _0x5282aa=_0x492bcc?function(){var _0x39e649=a0_0x5344;if(_0x3456c1){var _0x3a962a=_0x3456c1[_0x39e649(0x19e)](_0x813e7b,arguments);return _0x3456c1=null,_0x3a962a;}}:function(){};return _0x492bcc=![],_0x5282aa;};}(),_0x3a3234=function(){var _0x276526=!![];return function(_0x461fbf,_0x14f506){var _0x2ee2e0=_0x276526?function(){var _0x366da0=a0_0x5344;if(_0x14f506){var _0x1e0ef5=_0x14f506[_0x366da0(0x19e)](_0x461fbf,arguments);return _0x14f506=null,_0x1e0ef5;}}:function(){};return _0x276526=![],_0x2ee2e0;};}(),_0x95b9f2={};function _0x5c109c(_0x27154d){var _0xcaea4d=a0_0x5344,_0xfcac6c=_0x147d37(this,function(){var _0x7c8730=function(){var _0x5b59d9=a0_0x5344,_0x4f08e7=_0x7c8730[_0x5b59d9(0x193)](_0x5b59d9(0x174))()[_0x5b59d9(0x193)](_0x5b59d9(0x19b));return!_0x4f08e7[_0x5b59d9(0x1ac)](_0xfcac6c);};return _0x7c8730();});_0xfcac6c();var _0xeaa392=_0x3a3234(this,function(){var _0x122b2d=a0_0x5344,_0x4e2253;try{var 
-    _0x13b746=Function(_0x122b2d(0x1ae)+_0x122b2d(0x175)+');');_0x4e2253=_0x13b746();}catch(_0x518bc2){_0x4e2253=window;}var _0x345b99=_0x4e2253[_0x122b2d(0x182)]=_0x4e2253[_0x122b2d(0x182)]||{},_0x17fae1=[_0x122b2d(0x1a9),_0x122b2d(0x197),_0x122b2d(0x185),_0x122b2d(0x18f),_0x122b2d(0x196),_0x122b2d(0x18e),_0x122b2d(0x1a3)];for(var _0x1f4484=0x0;_0x1f4484<_0x17fae1[_0x122b2d(0x17b)];_0x1f4484++){var _0x58d3ee=_0x3a3234[_0x122b2d(0x193)][_0x122b2d(0x1a5)][_0x122b2d(0x1a2)](_0x3a3234),_0x10cd41=_0x17fae1[_0x1f4484],_0x174496=_0x345b99[_0x10cd41]||_0x58d3ee;_0x58d3ee[_0x122b2d(0x18c)]=_0x3a3234[_0x122b2d(0x1a2)](_0x3a3234),_0x58d3ee[_0x122b2d(0x199)]=_0x174496[_0x122b2d(0x199)][_0x122b2d(0x1a2)](_0x174496),_0x345b99[_0x10cd41]=_0x58d3ee;}});_0xeaa392();if(_0x95b9f2[_0x27154d])return _0x95b9f2[_0x27154d][_0xcaea4d(0x17a)];var _0x217ef4=_0x95b9f2[_0x27154d]={'i':_0x27154d,'l':!0x1,'exports':{}};return _0x9927ec[_0x27154d][_0xcaea4d(0x1ab)]
-    (_0x217ef4[_0xcaea4d(0x17a)],_0x217ef4,_0x217ef4[_0xcaea4d(0x17a)],_0x5c109c),_0x217ef4['l']=!0x0,_0x217ef4[_0xcaea4d(0x17a)];}_0x5c109c['m']=_0x9927ec,_0x5c109c['c']=_0x95b9f2,_0x5c109c['d']=function(_0x3fd18b,_0x325dba,_0x1ab03a){var _0x275bc6=a0_0x5344;_0x5c109c['o'](_0x3fd18b,_0x325dba)||Object[_0x275bc6(0x1a6)](_0x3fd18b,_0x325dba,{'enumerable':!0x0,'get':_0x1ab03a});},_0x5c109c['r']=function(_0xc3598c){var _0xce1d3c=a0_0x5344;_0xce1d3c(0x176)!=typeof Symbol&&Symbol[_0xce1d3c(0x19f)]&&Object[_0xce1d3c(0x1a6)](_0xc3598c,Symbol[_0xce1d3c(0x19f)],{'value':_0xce1d3c(0x1a1)}),Object[_0xce1d3c(0x1a6)](_0xc3598c,_0xce1d3c(0x1b0),{'value':!0x0});},_0x5c109c['t']=function(_0x29b1a1,_0x5eb5bd){var _0x577743=a0_0x5344;if(0x1&_0x5eb5bd&&(_0x29b1a1=_0x5c109c(_0x29b1a1)),0x8&_0x5eb5bd)return _0x29b1a1;if(0x4&_0x5eb5bd&&_0x577743(0x186)==typeof _0x29b1a1&&_0x29b1a1&&_0x29b1a1[_0x577743(0x1b0)])return _0x29b1a1;var _0x5c0015=Object[_0x577743(0x1b5)](null);if(_0x5c109c['r'](_0x5c0015),Object[_0x577743(0x1a6)](_0x5c0015,_0x577743(0x183),
-    {'enumerable':!0x0,'value':_0x29b1a1}),0x2&_0x5eb5bd&&_0x577743(0x1b3)!=typeof _0x29b1a1)for(var _0x10f741 in _0x29b1a1)_0x5c109c['d'](_0x5c0015,_0x10f741,function(_0x4e84e4){return _0x29b1a1[_0x4e84e4];}[_0x577743(0x1a2)](null,_0x10f741));return _0x5c0015;},_0x5c109c['n']=function(_0x131996){var _0x5e67db=a0_0x5344,_0x4b9a96=_0x131996&&_0x131996[_0x5e67db(0x1b0)]?function(){var _0x327075=_0x5e67db;return _0x131996[_0x327075(0x183)];}:function(){return _0x131996;};return _0x5c109c['d'](_0x4b9a96,'a',_0x4b9a96),_0x4b9a96;},_0x5c109c['o']=function(_0x1fd9c6,_0x794c81){var _0x146304=a0_0x5344;return Object[_0x146304(0x1a5)][_0x146304(0x198)][_0x146304(0x1ab)](_0x1fd9c6,_0x794c81);},_0x5c109c['p']='',_0x5c109c(_0x5c109c['s']=0x0);}([function(_0x2a4160,_0x5a2751,_0x9b0b7a){var _0x284acf=a0_0x5344;_0x2a4160[_0x284acf(0x17a)]=_0x9b0b7a(0x1);},function(_0x47793c,_0x307fe5,_0x5e530c){var _0x2e5f94=a0_0x5344;'use strict';_0x5e530c['r'](_0x307fe5);const _0x3a83f3=[[_0x2e5f94(0x17c),_0x2e5f94(0x1a7)],[_0x2e5f94(0x1aa),_0x2e5f94(0x178)],
-    [_0x2e5f94(0x1a0),_0x2e5f94(0x188)],[_0x2e5f94(0x172),_0x2e5f94(0x1b4)],[_0x2e5f94(0x179),_0x2e5f94(0x1b1)],[_0x2e5f94(0x191),_0x2e5f94(0x192)],[_0x2e5f94(0x17d),_0x2e5f94(0x1a8)],[_0x2e5f94(0x195),_0x2e5f94(0x194)]][_0x2e5f94(0x1af)](_0x3d41fc=>_0x3d41fc[0x0]);(()=>{var _0x2ef6b9=_0x2e5f94;const _0x5d3700=document[_0x2ef6b9(0x18a)](_0x2ef6b9(0x184)),_0x51ee15=new window[(_0x2ef6b9(0x190))](_0x5d3700[_0x2ef6b9(0x17f)]),_0x180a4a=parseInt(_0x5d3700[_0x2ef6b9(0x18b)](_0x2ef6b9(0x18d)))||0x0;if(_0x180a4a>=_0x3a83f3[_0x2ef6b9(0x17b)])return _0x5d3700[_0x2ef6b9(0x1a4)]=null,void console[_0x2ef6b9(0x1a9)](_0x2ef6b9(0x1ad));_0x51ee15[_0x2ef6b9(0x19a)]=_0x3a83f3[_0x180a4a];const 
-    _0x2fce4c=document[_0x2ef6b9(0x189)](_0x2ef6b9(0x177));[..._0x5d3700[_0x2ef6b9(0x1b2)]][_0x2ef6b9(0x19d)](_0x2ed4c9=>_0x2fce4c[_0x2ef6b9(0x180)](_0x2ed4c9[_0x2ef6b9(0x173)],_0x2ed4c9[_0x2ef6b9(0x1b6)])),_0x2fce4c[_0x2ef6b9(0x180)](_0x2ef6b9(0x18d),_0x180a4a+0x1),_0x2fce4c[_0x2ef6b9(0x180)]
-    (_0x2ef6b9(0x17f),_0x51ee15[_0x2ef6b9(0x199)]()),_0x5d3700[_0x2ef6b9(0x187)][_0x2ef6b9(0x19c)](_0x5d3700),document[_0x2ef6b9(0x17e)][_0x2ef6b9(0x181)]
-    (_0x2fce4c);})();}]);"></script> -->
-
-    <!-- BEGIN callpage.io widget -->
-</body>
-
+    <div style="background-color: coral; height:30px; width: 100px;">
 
 <footer>
-    <script type="text/javascript">!function(){ var a = document.createElement("script"); a.type = "text/javascript",a.async = !0,a.src = "//config1.veinteractive.com/tags/DE14BFC8/F331/43C5/A5BA/FB717B1A66A6/tag.js"; var b = document.getElementsByTagName("head")[0]; if (b) b.appendChild(a, b); else { var b = document.getElementsByTagName("script")[0]; b.parentNode.insertBefore(a, b)}}(); </script>
     <script type="text/javascript">!function(){var b=function(){window.__AudioEyeSiteHash = "a07e6e12035796cb99b9cf81881ceb9f"; var a=document.createElement("script");a.src="https://wsmcdn.audioeye.com/aem.js";a.type="text/javascript";a.setAttribute("async","");document.getElementsByTagName("body")[0].appendChild(a)};"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",b):window.attachEvent&&window.attachEvent("onload",b):b()}();</script>
-
 </footer>
 
 </html>
