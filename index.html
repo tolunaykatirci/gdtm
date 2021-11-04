@@ -49,45 +49,19 @@
 
 <!-- Each DOM element with a class starting with "Coveo" (uppercase) will instantiate a component. -->
 
-<body id="search" class='CoveoSearchInterface'>
-
+<body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N966LWH" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <!-- Each DOM element with a class starting with "coveo-" (lowercase) is strictly for CSS/alignment purpose. -->
-    <div class='coveo-search-section'>
+    <a href="./second.html">Second</a>
+    </br>
+    <a href="./third.html">Third</a>
+    </br>
 
-        <!-- Any Coveo component can be removed (or added); none is actually required for the page to "load". -->
-        <div class="CoveoSearchbox"></div>
+    <div style="background-color: coral; height:30px; width: 100px;">
+
     </div>
-
-    <!-- The "data-" attributes of each component allow you to pass options to this specific component instance. -->
-    <div class="CoveoFacet" data-title="Author" data-field="@admin" data-tab="All"></div>
-    <div class="CoveoFacet" data-title="Year" data-field="@2021" data-tab="All"></div>
-
-    <div class="CoveoAnalytics"></div>
-    <div class="coveo-search-section">
-        <div class="CoveoSearchbox"></div>
-    </div>
-    <div class="coveo-main-section">
-    </div class="CoveoResultList">
-    </div>
-    </div>
-
-    <a href="./second.html">Second Page \n </a>
-    <a href="./third.html">Third Page \n </a>
-    <script>
-        // The following line shows you how you could configure an endpoint against which to perform your search.
-        // Coveo.SearchEndpoint.configureCloudEndpoint('MyCoveoCloudEnpointName', 'my-authentification-token');
-
-        // We provide a sample endpoint with public sources for demo purposes.
-        Coveo.SearchEndpoint.configureSampleEndpoint();
-
-        // Initialize the framework by targeting the root in the interface.
-        // It does not have to be the document body.
-        Coveo.init(document.body);
-    </script>
 </body>
 
 </html>
