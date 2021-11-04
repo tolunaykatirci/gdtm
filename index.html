@@ -8,19 +8,6 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
-    <script>
-        (async () => {
-            await customElements.whenDefined('atomic-search-interface');
-            const searchInterface = document.querySelector('#search');
-            await searchInterface.initialize({
-                accessToken: 'xx0837b011-f02b-464b-9bef-9ec87a3a9dd8',
-                organizationId: 'huaweiorganizationid123456'
-            });
-            searchInterface.executeFirstSearch();
-        })();
-    </script>
-
-
 </head>
 
 <body id="search" class='CoveoSearchInterface'>
@@ -54,40 +41,6 @@
 <a href="/second.html">Second</a>
 
 <a href="/third.html">Third Page</a>
-
-
-
-<div style="display:flex; flex-direction:column">
-  
-
-    <span style="font-size: x-large;">Ensure inject dtm snippet as follow</span><br>
-    <span>1. Create a DTM project</span><br>
-    <div style="background-color: cadetblue; width: 200px; height: 200px;">
-        <atomic-search-interface id="search">
-            <atomic-search-box style="width: 40px; height: 40px; background-color: blue;"></atomic-search-box>
-            <atomic-facet-manager>
-                <atomic-facet field="author" label="Authors"></atomic-facet>
-                <!-- ... -->
-            </atomic-facet-manager>
-            <!-- ... -->
-        </atomic-search-interface>
-    </div>
-
-
-    <!-- Google Tag Manager (noscript) -->
-    <!--noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N966LWH" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript-->
-    <!-- End Google Tag Manager (noscript) -->
-    <p>Hello, World! This is an update! Second Update!!!!</p>
-    <p>My Pretty Update!!!</p>
-   
-    <a href="/second.html">Second</a>
-
-    <a href="/third.html">Third Page</a>
-
-
-
-    
 
 
 </body>
