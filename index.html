@@ -47,12 +47,15 @@
             language: 'en',
             searchInputs: ['cludo-search-form'],
             type: 'standardOverlayWithDynamicSearchBox',
-            theme: { searchBoxPosition: {align: 'left', x: 20, y: 20} },
+            theme: { searchBoxPosition: {align: 'right', x: 20, y: 20} },
         };
         CludoSearch = new Cludo(cludoSettings);
         CludoSearch.init();
     })();
     </script>
+    <!--[if lte IE 9]>
+        <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
+    <![endif]-->
     <!--[if lte IE 9]>
         <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
     <![endif]-->
