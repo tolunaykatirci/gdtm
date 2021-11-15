@@ -10,7 +10,6 @@
 
     <link href="https://customer.cludo.com/css/overlay/cludo-search-default.min.css" type="text/css" rel="stylesheet">
 
-
     <!--script class="coveo-script"
         src="https://static.cloud.coveo.com/searchui/v2.10090/js/CoveoJsSearch.Lazy.min.js"></script>
     <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.10090/css/CoveoFullSearch.css" />
@@ -39,20 +38,24 @@
 <body>
 
     <script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script>
-<script>
-var CludoSearch;
-(function () {
-    var cludoSettings = {
-        customerId: 2921,
-        engineId: 12553,
-        language: 'en',
-        searchInputs: ['cludo-search-form'],
-        type: 'standardOverlay'
-    };
-    CludoSearch = new Cludo(cludoSettings);
-    CludoSearch.init();
-})();
-</script>
+    <script>
+    var CludoSearch;
+    (function () {
+        var cludoSettings = {
+            customerId: 2921,
+            engineId: 12553,
+            language: 'en',
+            searchInputs: ['cludo-search-form'],
+            type: 'standardOverlayWithDynamicSearchBox',
+            theme: { searchBoxPosition: {align: 'left', x: 20, y: 20} },
+        };
+        CludoSearch = new Cludo(cludoSettings);
+        CludoSearch.init();
+    })();
+    </script>
+    <!--[if lte IE 9]>
+        <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
+    <![endif]-->
 <!--[if lte IE 9]>
     <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
 <![endif]-->
