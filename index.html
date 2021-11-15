@@ -36,6 +36,8 @@
         src="https://platform.cloud.coveo.com/rest/organizations/mycoveoorganization/pages/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/inappwidget/loader?access_token=xx0837b011-f02b-464b-9bef-9ec87a3a9dd8"
         async></script-->
     <!-- End Coveo In-Product Experience -->
+    <link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css"
+        rel="stylesheet">
 
 
 
@@ -46,6 +48,45 @@
 
 <body>
 
+    <form id="cludo-search-form" role="search">
+        <input type="search" class="search-input" aria-label="Search" aria-describedby="autocomplete_hint">
+        <button type="submit" class="search-button" id="search-button">Search</button>
+    </form>
+
+    <script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script>
+    <script>
+        var CludoSearch;
+        (function () {
+            var cludoSettings = {
+                customerId: 2921,
+                engineId: 12553,
+                searchUrl: 'https://tolunaykatirci.github.io/gdtm/',
+                language: 'en',
+                searchInputs: ['cludo-search-form'],
+                template: 'InlineBasicImages',
+                focusOnResultsAfterSearch: true,
+                type: 'inline'
+            };
+            CludoSearch = new Cludo(cludoSettings);
+            CludoSearch.init();
+        })();
+    </script>
+
+    <div id="cludo-search-results">
+        <div class="cludo-r">
+            <div class="cludo-c-3">
+                <div class="search-filters" role="navigation"></div>
+            </div>
+            <div class="cludo-c-9" role="main">
+                <div class="search-result-count"></div>
+                <div class="search-did-you-mean"></div>
+                <div class="search-results"></div>
+            </div>
+        </div>
+    </div>
+    <!--[if lte IE 9]>
+    <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
+<![endif]-->
     <!-- End Google Tag Manager (noscript) -->
     <a href="./second.html">Second</a>
     </br>
@@ -53,13 +94,15 @@
     </br>
 
     <div style="background-color: coral; height:30px; width: 100px;">
-</div> 
+    </div>
 
-<script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12474"></script> 
+    <script id="gorgias-chat-widget-install-v2"
+        src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12474"></script>
 
 </body>
 <footer>
-    <script type="text/javascript">!function(){var b=function(){window.__AudioEyeSiteHash = "a07e6e12035796cb99b9cf81881ceb9f"; var a=document.createElement("script");a.src="https://wsmcdn.audioeye.com/aem.js";a.type="text/javascript";a.setAttribute("async","");document.getElementsByTagName("body")[0].appendChild(a)};"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",b):window.attachEvent&&window.attachEvent("onload",b):b()}();</script>
+    <script
+        type="text/javascript">!function () { var b = function () { window.__AudioEyeSiteHash = "a07e6e12035796cb99b9cf81881ceb9f"; var a = document.createElement("script"); a.src = "https://wsmcdn.audioeye.com/aem.js"; a.type = "text/javascript"; a.setAttribute("async", ""); document.getElementsByTagName("body")[0].appendChild(a) }; "complete" !== document.readyState ? window.addEventListener ? window.addEventListener("load", b) : window.attachEvent && window.attachEvent("onload", b) : b() }();</script>
 </footer>
 
 </html>
