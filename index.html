@@ -8,15 +8,8 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
 
-    <!-- Dynamic Tag Manager -->
-    <script>
-        (function () { window.recordTier = window.recordTier || [], window.recordTier.push({ eventName: 'dtm.js' }); var e = document.getElementsByTagName('script')[0], r = document.createElement('script'); r.async = !0, r.src = 'https://dtm-beta.hwcloudtest.cn/download/web/dtm.js?id=DTM-0a219fd07a6211f7817a7579ac172a3f', e.parentNode.insertBefore(r, e); })();
-    </script>
-    <!-- End Dynamic Tag Manager -->
+    <link href="https://customer.cludo.com/css/overlay/cludo-search-default.min.css" type="text/css" rel="stylesheet">
 
-    <script
-        src="https://firebasestorage.googleapis.com/v0/b/ideta-prod.appspot.com/o/bots%2F-MnjdDELPz22FhBNl3A2%2Fscripts%2Fintegration-web.js?alt=media&token=39b9efb4-5efb-4ea9-92d0-19dd0540a0f0"
-        type="text/javascript" async></script>
 
     <!--script class="coveo-script"
         src="https://static.cloud.coveo.com/searchui/v2.10090/js/CoveoJsSearch.Lazy.min.js"></script>
@@ -36,10 +29,7 @@
         src="https://platform.cloud.coveo.com/rest/organizations/mycoveoorganization/pages/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/inappwidget/loader?access_token=xx0837b011-f02b-464b-9bef-9ec87a3a9dd8"
         async></script-->
     <!-- End Coveo In-Product Experience -->
-    <link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css"
-        rel="stylesheet">
-
-
+   
 
 </head>
 
@@ -48,29 +38,25 @@
 
 <body>
 
-    <form id="cludo-search-form" role="search">
-        <input type="search" class="search-input" aria-label="Search" aria-describedby="autocomplete_hint">
-        <button type="submit" class="search-button" id="search-button">Search</button>
-    </form>
-
     <script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script>
-    <script>
-        var CludoSearch;
-        (function () {
-            var cludoSettings = {
-                customerId: 2921,
-                engineId: 12553,
-                searchUrl: 'https://tolunaykatirci.github.io/gdtm/',
-                language: 'en',
-                searchInputs: ['cludo-search-form'],
-                template: 'InlineBasicImages',
-                focusOnResultsAfterSearch: true,
-                type: 'inline'
-            };
-            CludoSearch = new Cludo(cludoSettings);
-            CludoSearch.init();
-        })();
-    </script>
+<script>
+var CludoSearch;
+(function () {
+    var cludoSettings = {
+        customerId: 2921,
+        engineId: 12553,
+        language: 'en',
+        searchInputs: ['cludo-search-form'],
+        type: 'standardOverlay'
+    };
+    CludoSearch = new Cludo(cludoSettings);
+    CludoSearch.init();
+})();
+</script>
+<!--[if lte IE 9]>
+    <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
+<![endif]-->
+
 
 
     <!--[if lte IE 9]>
