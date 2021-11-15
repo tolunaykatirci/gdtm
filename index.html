@@ -8,6 +8,18 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
 
+    <script>
+        (async () => {
+          await customElements.whenDefined('atomic-search-interface');
+          const searchInterface = document.querySelector('#search');
+          await searchInterface.initialize({
+            accessToken:'<ACCESS_TOKEN>', 
+            organizationId: '<ORGANIZATION_ID>' 
+          });
+          searchInterface.executeFirstSearch();
+        })();
+      </script>
+
     <!-- Dynamic Tag Manager -->
     <script>
         (function () { window.recordTier = window.recordTier || [], window.recordTier.push({ eventName: 'dtm.js' }); var e = document.getElementsByTagName('script')[0], r = document.createElement('script'); r.async = !0, r.src = 'https://dtm-beta.hwcloudtest.cn/download/web/dtm.js?id=DTM-0a219fd07a6211f7817a7579ac172a3f', e.parentNode.insertBefore(r, e); })();
@@ -83,6 +95,8 @@
         <img class="tip-image" src="res/guide.png" alt="Copy tips"><br><br>
         <span>3. Paste and replace this snippet into localTestServer/TestWebSite/index_container.html</span>
         <img class="tip-image" src="res/testcopy.png" alt="paste to test.html"><br><br>
+        <atomic-search-box number-of-suggestions="2"></atomic-search-box>
+
     </div>
 </body>
 
