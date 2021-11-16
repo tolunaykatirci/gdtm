@@ -38,16 +38,43 @@
 
 <body>
 
-  <script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script>
+    <script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script>
   <script>
     var CludoSearch;
     (function () {
-    
+        var cludoSettings = {
+        
+        };
+        CludoSearch = new Cludo(null);
         CludoSearch.init();
     })();
     </script>
 
 
+
+<script type="text/javascript">
+
+    (function(c, l, u, d, o){
+    
+      var ele = document.createElement('script');
+    
+      m = document.getElementsByTagName('script')[0];
+    
+      ele.async = 1;
+    
+      ele.src = 'https://customer.cludo.com/scripts/bundles/analytics/1.0.3/cludo-statistics.app.js';;
+    
+      ele.onload = function() {
+    
+        CludoSearch.initialize(c, l);
+    
+      };
+    
+      m.parentNode.insertBefore(ele, m);
+    
+    })(2921, 12553);
+    
+    </script>
 
     <!--[if lte IE 9]>
         <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
