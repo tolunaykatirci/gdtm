@@ -8,7 +8,8 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
 
-    <link href="https://customer.cludo.com/css/overlay/cludo-search-default.min.css" type="text/css" rel="stylesheet">
+    <link href="https://customer.cludo.com/css/overlay/cludo-search-default.min.css"
+     type="text/css" rel="stylesheet">
 
     <!--script class="coveo-script"
         src="https://static.cloud.coveo.com/searchui/v2.10090/js/CoveoJsSearch.Lazy.min.js"></script>
@@ -37,8 +38,8 @@
 
 <body>
 
-    <script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script>
-    <script>
+    <!--script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script-->
+  <!--script>
     var CludoSearch;
     (function () {
         var cludoSettings = {
@@ -52,7 +53,34 @@
         CludoSearch = new Cludo(cludoSettings);
         CludoSearch.init();
     })();
+    </script-->
+
+
+
+<script type="text/javascript">
+
+    (function(c, l, u, d, o){
+    
+      var ele = document.createElement('script');
+    
+      m = document.getElementsByTagName('script')[0];
+    
+      ele.async = 1;
+    
+      ele.src = 'https://customer.cludo.com/scripts/bundles/analytics/1.0.3/cludo-statistics.app.js';;
+    
+      ele.onload = function() {
+    
+        CludoSearch.initialize(c, l);
+    
+      };
+    
+      m.parentNode.insertBefore(ele, m);
+    
+    })(2921, 12553);
+    
     </script>
+
     <!--[if lte IE 9]>
         <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
     <![endif]-->
@@ -82,8 +110,8 @@
 
 </body>
 <footer>
-    <script
-        type="text/javascript">!function () { var b = function () { window.__AudioEyeSiteHash = "a07e6e12035796cb99b9cf81881ceb9f"; var a = document.createElement("script"); a.src = "https://wsmcdn.audioeye.com/aem.js"; a.type = "text/javascript"; a.setAttribute("async", ""); document.getElementsByTagName("body")[0].appendChild(a) }; "complete" !== document.readyState ? window.addEventListener ? window.addEventListener("load", b) : window.attachEvent && window.attachEvent("onload", b) : b() }();</script>
+    <!--script
+        type="text/javascript">!function () { var b = function () { window.__AudioEyeSiteHash = "a07e6e12035796cb99b9cf81881ceb9f"; var a = document.createElement("script"); a.src = "https://wsmcdn.audioeye.com/aem.js"; a.type = "text/javascript"; a.setAttribute("async", ""); document.getElementsByTagName("body")[0].appendChild(a) }; "complete" !== document.readyState ? window.addEventListener ? window.addEventListener("load", b) : window.attachEvent && window.attachEvent("onload", b) : b() }();</script-->
 </footer>
 
 </html>
