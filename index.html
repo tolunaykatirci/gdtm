@@ -7,10 +7,6 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
-
-    <link href="https://customer.cludo.com/css/overlay/cludo-search-default.min.css"
-     type="text/css" rel="stylesheet">
-
     <!--script class="coveo-script"
         src="https://static.cloud.coveo.com/searchui/v2.10090/js/CoveoJsSearch.Lazy.min.js"></script>
     <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.10090/css/CoveoFullSearch.css" />
@@ -38,12 +34,19 @@
 
 <body>
 
-  <script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script>
   <script>
     var CludoSearch;
     (function () {
         var cludoSettings = {
-  
+            customerId: 2921,
+        engineId: 12552,
+        searchUrl: 'https://tolunaykatirci.github.io/gdtm/',
+        language: 'en',
+        searchInputs: ['cludo-search-form'],
+        template: 'InlineBasic',
+        hideSearchFilters: true,
+        focusOnResultsAfterSearch: true,
+        type: 'inline'
         };
         CludoSearch = new Cludo(cludoSettings);
         CludoSearch.init();
