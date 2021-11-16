@@ -7,6 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
+    <link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css" rel="stylesheet">
 
     <!-- <script>
         (function (e, a, s, y) {
@@ -17,20 +18,20 @@
             f.parentNode.insertBefore(d, f);
         })(document, 'script', 'https://indivsurvey.de', 'GKWz726DkI');
     </script> -->
-
-        <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-T6SCW6L');</script>
-        <!-- End Google Tag Manager -->
 </head>
-<body>
+<body id="cludo-search-form" role="search">
+    <input type="search" class="search-input" aria-label="Search" aria-describedby="autocomplete_hint">
+    <button type="submit" class="search-button" id="search-button">Search</button>>
     Second page!!
+    <div id="cludo-search-results">
+        <div class="cludo-r">
+            <div class="cludo-c-12" role="main">
+                <div class="search-result-count"></div>
+                <div class="search-did-you-mean"></div>
+                <div class="search-results"></div>
+            </div>
+        </div>
+    </div>
 </body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6SCW6L"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+
 </html>
