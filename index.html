@@ -7,6 +7,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
+    <link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css" rel="stylesheet">
+
     <!--script class="coveo-script"
         src="https://static.cloud.coveo.com/searchui/v2.10090/js/CoveoJsSearch.Lazy.min.js"></script>
     <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.10090/css/CoveoFullSearch.css" />
@@ -33,12 +35,17 @@
 <!-- Each DOM element with a class starting with "Coveo" (uppercase) will instantiate a component. -->
 
 <body>
+    <form id="cludo-search-form" role="search">
+        <input type="search" class="search-input" aria-label="Search" aria-describedby="autocomplete_hint">
+        <button type="submit" class="search-button" id="search-button">Search</button>
+    </form>
 
-  <script>
-    var CludoSearch;
-    (function () {
-        var cludoSettings = {
-            customerId: 2921,
+    <script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script>
+<script>
+var CludoSearch;
+(function () {
+    var cludoSettings = {
+        customerId: 2921,
         engineId: 12552,
         searchUrl: 'https://tolunaykatirci.github.io/gdtm/',
         language: 'en',
@@ -47,11 +54,15 @@
         hideSearchFilters: true,
         focusOnResultsAfterSearch: true,
         type: 'inline'
-        };
-        CludoSearch = new Cludo(cludoSettings);
-        CludoSearch.init();
-    })();
-    </script>
+    };
+    CludoSearch = new Cludo(cludoSettings);
+    CludoSearch.init();
+})();
+</script>
+<!--[if lte IE 9]>
+    <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
+<![endif]-->
+
 
 
 
@@ -88,7 +99,15 @@
 <!--[if lte IE 9]>
     <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
 <![endif]-->
-
+<div id="cludo-search-results">
+    <div class="cludo-r">
+        <div class="cludo-c-12" role="main">
+            <div class="search-result-count"></div>
+            <div class="search-did-you-mean"></div>
+            <div class="search-results"></div>
+        </div>
+    </div>
+</div>
 
 
     <!--[if lte IE 9]>
