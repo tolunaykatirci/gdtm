@@ -50,26 +50,28 @@
 
 </head>
 <style>
-    atomic-result::part(result-printable-uri-list-element){
-      text-transform: capitalize;
+    atomic-result::part(result-printable-uri-list-element) {
+        text-transform: capitalize;
     }
-    atomic-search-box::part(submit-button){
-      background-color: orangered;
+
+    atomic-search-box::part(submit-button) {
+        background-color: orangered;
     }
-  </style>
+</style>
 
 <!-- Each DOM element with a class starting with "Coveo" (uppercase) will instantiate a component. -->
 
 <body>
-    <div style="background-color: violet; width:200px; height: 100px;"></div>
-    <atomic-search-interface id="search">
-        <atomic-search-box></atomic-search-box>
-        <atomic-facet-manager>
-          <atomic-facet field="author" label="Authors"></atomic-facet>
-          <!-- ... -->
-        </atomic-facet-manager>
-        <!-- ... -->
-      </atomic-search-interface>
+    <div style="background-color: violet; width:200px; height: 100px;">
+        <atomic-search-interface id="search">
+            <atomic-search-box></atomic-search-box>
+            <atomic-facet-manager>
+                <atomic-facet field="author" label="Authors"></atomic-facet>
+                <!-- ... -->
+            </atomic-facet-manager>
+            <!-- ... -->
+        </atomic-search-interface>
+    </div>
     <!--form id="cludo-search-form" role="search">
         <input type="search" class="search-input" aria-label="Search" aria-describedby="autocomplete_hint">
         <button type="submit" class="search-button" id="search-button">Search</button>
