@@ -96,25 +96,26 @@
             <atomic-search-box></atomic-search-box>
             <atomic-facet-manager>
                 <atomic-facet field="author" label="Authors"></atomic-facet>
+                <atomic-result-list fields-to-include="filetype"> 
+                    <atomic-result-template id="demoTemplate">
+                      <template>
+                        <div id="title">
+                          <a href="https://tolunaykatirci.github.io/gdtm/third.html"><h3>Third Page</h3></a>
+                        </div>
+                        <div>
+                          <atomic-result-value value="excerpt"></atomic-result-value>
+                        </div>
+                        <div id="type">
+                          <atomic-result-value value="filetype"></atomic-result-value>
+                        </div>
+                      </template>
+                    </atomic-result-template>
+                  </atomic-result-list>
                 <!-- ... -->
             </atomic-facet-manager>
 
 
-            <atomic-result-list fields-to-include="filetype"> 
-                <atomic-result-template id="demoTemplate">
-                  <template>
-                    <div id="title">
-                      <a href="https://tolunaykatirci.github.io/gdtm/third.html"><h3>Third Page</h3></a>
-                    </div>
-                    <div>
-                      <atomic-result-value value="excerpt"></atomic-result-value>
-                    </div>
-                    <div id="type">
-                      <atomic-result-value value="filetype"></atomic-result-value>
-                    </div>
-                  </template>
-                </atomic-result-template>
-              </atomic-result-list>
+            
             <!-- ... -->
         </atomic-search-interface>
     </div>
