@@ -46,7 +46,23 @@
         src="https://platform.cloud.coveo.com/rest/organizations/mycoveoorganization/pages/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/inappwidget/loader?access_token=xx0837b011-f02b-464b-9bef-9ec87a3a9dd8"
         async></script-->
     <!-- End Coveo In-Product Experience -->
-
+    <style>
+        .interface-container {
+          width: 100%;
+          max-width: 1250px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: 25% 1fr;
+          gap: 20px;
+        }
+        .search-box-item {
+          grid-column-start: 2;
+        }
+        .footer-item {
+          grid-column-start: 2;
+          grid-row-start: 3;
+        }
+      </style>
 
 </head>
 <style>
@@ -56,11 +72,6 @@
 
     atomic-search-box::part(submit-button) {
         background-color: orangered;
-    }
-    
-    footer-item {
-      grid-column-start: 2;
-      grid-row-start: 3;
     }
 </style>
 
