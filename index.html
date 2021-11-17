@@ -57,6 +57,11 @@
     atomic-search-box::part(submit-button) {
         background-color: orangered;
     }
+    
+    footer-item {
+      grid-column-start: 2;
+      grid-row-start: 3;
+    }
 </style>
 
 <!-- Each DOM element with a class starting with "Coveo" (uppercase) will instantiate a component. -->
@@ -72,6 +77,10 @@
             <!-- ... -->
         </atomic-search-interface>
     </div>
+    <div class="footer-item">
+        <atomic-pager></atomic-pager>
+        <atomic-results-per-page></atomic-results-per-page>
+      </div>
     <!--form id="cludo-search-form" role="search">
         <input type="search" class="search-input" aria-label="Search" aria-describedby="autocomplete_hint">
         <button type="submit" class="search-button" id="search-button">Search</button>
