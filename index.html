@@ -63,6 +63,15 @@
           grid-row-start: 3;
         }
       </style>
+      <style>
+        atomic-facet-manager {
+          padding-top: 13px;
+        }
+        atomic-result-list {
+          display: block;
+          margin-top: 10px;
+        }
+      </style>
 
 </head>
 <style>
@@ -88,10 +97,28 @@
             <!-- ... -->
         </atomic-search-interface>
     </div>
-    <div class="footer-item">
-        <atomic-pager></atomic-pager>
-        <atomic-results-per-page></atomic-results-per-page>
-      </div>
+ 
+
+    <atomic-result-list fields-to-include="filetype"> 
+        <atomic-result-template id="demoTemplate">
+          <template>
+            <div id="title">
+              <a href="https://tolunaykatirci.github.io/gdtm/third.html"><h3>Third Page</h3></a>
+            </div>
+            <div>
+              <atomic-result-value value="excerpt"></atomic-result-value>
+            </div>
+            <div id="type">
+              <atomic-result-value value="filetype"></atomic-result-value>
+            </div>
+          </template>
+        </atomic-result-template>
+      </atomic-result-list>
+
+
+
+
+
     <!--form id="cludo-search-form" role="search">
         <input type="search" class="search-input" aria-label="Search" aria-describedby="autocomplete_hint">
         <button type="submit" class="search-button" id="search-button">Search</button>
