@@ -7,7 +7,26 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
-    <link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css" rel="stylesheet">
+    <!--link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css"
+        rel="stylesheet"-->
+
+
+    <script type="module" src="https://static.cloud.coveo.com/atomic/latest/atomic.esm.js"></script>
+    <link rel="stylesheet" href="https://static.cloud.coveo.com/atomic/latest/themes/coveo.css" />
+
+
+    <script>
+        (async () => {
+            await customElements.whenDefined('atomic-search-interface');
+            const searchInterface = document.querySelector('#search');
+            await searchInterface.initialize({
+                accessToken: 'xxac1f89d1-e7af-4022-ac1a-79795246a0b7',
+                organizationId: 'hu_org_id'
+            });
+            searchInterface.executeFirstSearch();
+        })();
+    </script>
+
 
     <!--script class="coveo-script"
         src="https://static.cloud.coveo.com/searchui/v2.10090/js/CoveoJsSearch.Lazy.min.js"></script>
@@ -27,68 +46,83 @@
         src="https://platform.cloud.coveo.com/rest/organizations/mycoveoorganization/pages/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/inappwidget/loader?access_token=xx0837b011-f02b-464b-9bef-9ec87a3a9dd8"
         async></script-->
     <!-- End Coveo In-Product Experience -->
-   
+
 
 </head>
-
+<style>
+    atomic-result::part(result-printable-uri-list-element){
+      text-transform: capitalize;
+    }
+    atomic-search-box::part(submit-button){
+      background-color: orangered;
+    }
+  </style>
 
 <!-- Each DOM element with a class starting with "Coveo" (uppercase) will instantiate a component. -->
 
 <body>
-    <form id="cludo-search-form" role="search">
+    <atomic-search-interface id="search">
+        <atomic-search-box></atomic-search-box>
+        <atomic-facet-manager>
+          <atomic-facet field="author" label="Authors"></atomic-facet>
+          <!-- ... -->
+        </atomic-facet-manager>
+        <!-- ... -->
+      </atomic-search-interface>
+    <!--form id="cludo-search-form" role="search">
         <input type="search" class="search-input" aria-label="Search" aria-describedby="autocomplete_hint">
         <button type="submit" class="search-button" id="search-button">Search</button>
-    </form>
+    </form-->
 
-    <script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script>
-<script>
-var CludoSearch;
-(function () {
-    var cludoSettings = {
-        customerId: 2921,
-        engineId: 12552,
-        searchUrl: 'https://tolunaykatirci.github.io/gdtm/',
-        language: 'en',
-        searchInputs: ['cludo-search-form'],
-        template: 'InlineBasic',
-        hideSearchFilters: true,
-        focusOnResultsAfterSearch: true,
-        type: 'inline'
-    };
-    CludoSearch = new Cludo(cludoSettings);
-    CludoSearch.init();
-})();
-</script>
-<!--[if lte IE 9]>
+    <!--script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script-->
+    <!--script>
+        var CludoSearch;
+        (function () {
+            var cludoSettings = {
+                customerId: 2921,
+                engineId: 12552,
+                searchUrl: 'https://tolunaykatirci.github.io/gdtm/',
+                language: 'en',
+                searchInputs: ['cludo-search-form'],
+                template: 'InlineBasic',
+                hideSearchFilters: true,
+                focusOnResultsAfterSearch: true,
+                type: 'inline'
+            };
+            CludoSearch = new Cludo(cludoSettings);
+            CludoSearch.init();
+        })();
+    </script-->
+    <!--[if lte IE 9]>
     <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
 <![endif]-->
 
 
 
 
-<script type="text/javascript">
+    <!--script type="text/javascript">
 
-    (function(c, l, u, d, o){
-    
-      var ele = document.createElement('script');
-    
-      m = document.getElementsByTagName('script')[0];
-    
-      ele.async = 1;
-    
-      ele.src = 'https://customer.cludo.com/scripts/bundles/analytics/1.0.3/cludo-statistics.app.js';;
-    
-      ele.onload = function() {
-    
-        CludoSearch.initialize(c, l);
-    
-      };
-    
-      m.parentNode.insertBefore(ele, m);
-    
-    })(2921, 12552);
-    
-    </script>
+        (function (c, l, u, d, o) {
+
+            var ele = document.createElement('script');
+
+            m = document.getElementsByTagName('script')[0];
+
+            ele.async = 1;
+
+            ele.src = 'https://customer.cludo.com/scripts/bundles/analytics/1.0.3/cludo-statistics.app.js';;
+
+            ele.onload = function () {
+
+                CludoSearch.initialize(c, l);
+
+            };
+
+            m.parentNode.insertBefore(ele, m);
+
+        })(2921, 12552);
+
+    </script-->
 
     <!--[if lte IE 9]>
         <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
@@ -96,7 +130,7 @@ var CludoSearch;
     <!--[if lte IE 9]>
         <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
     <![endif]-->
-<!--[if lte IE 9]>
+    <!--[if lte IE 9]>
     <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
 <![endif]-->
 
@@ -111,12 +145,15 @@ var CludoSearch;
     <a href="./third.html">Third</a>
     </br>
 
- 
-<!--Gorgias Chat Widget Start--><script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12595"></script><!--Gorgias Chat Widget End-->
 
-<footer>
-    <!--script
+    <!--Gorgias Chat Widget Start-->
+    <!--script id="gorgias-chat-widget-install-v2"
+        src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12595"></script-->
+    <!--Gorgias Chat Widget End-->
+
+    <footer>
+        <!--script
         type="text/javascript">!function () { var b = function () { window.__AudioEyeSiteHash = "a07e6e12035796cb99b9cf81881ceb9f"; var a = document.createElement("script"); a.src = "https://wsmcdn.audioeye.com/aem.js"; a.type = "text/javascript"; a.setAttribute("async", ""); document.getElementsByTagName("body")[0].appendChild(a) }; "complete" !== document.readyState ? window.addEventListener ? window.addEventListener("load", b) : window.attachEvent && window.attachEvent("onload", b) : b() }();</script-->
-</footer>
+    </footer>
 
 </html>
