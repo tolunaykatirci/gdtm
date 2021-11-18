@@ -8,6 +8,16 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
 
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TQC4KZ9');</script>
+    <!-- End Google Tag Manager -->
     <!--link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css"
         rel="stylesheet"-->
 
@@ -47,27 +57,25 @@
         src="https://platform.cloud.coveo.com/rest/organizations/mycoveoorganization/pages/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/inappwidget/loader?access_token=xx0837b011-f02b-464b-9bef-9ec87a3a9dd8"
         async></script-->
     <!-- End Coveo In-Product Experience -->
- 
+
 
 </head>
 
 <style>
     .interface-container {
-      width: 100%;
-      max-width: 1250px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 25% 1fr;
-      gap: 20px;
+        display: grid;
+        gap: 20px;
     }
+
     .search-box-item {
-      grid-column-start: 2;
+        grid-column-start: 2;
     }
+
     .footer-item {
-      grid-column-start: 2;
-      grid-row-start: 3;
+        grid-column-start: 2;
+        grid-row-start: 3;
     }
-  </style>
+</style>
 
 <style>
     atomic-result::part(result-printable-uri-list-element) {
@@ -81,49 +89,65 @@
 
 <style>
     atomic-facet-manager {
-      padding-top: 13px;
+        padding-top: 13px;
     }
+
     atomic-result-list {
-      display: block;
-      margin-top: 10px;
+        display: block;
+        margin-top: 10px;
     }
-  </style>
+</style>
 
 <!-- Each DOM element with a class starting with "Coveo" (uppercase) will instantiate a component. -->
 
 <body>
-    <div style="background-color: violet;width:max-content; height: 100px;">
+
+
+    <div style="height: 55px;">
         <atomic-search-interface id="search">
             <atomic-search-box></atomic-search-box>
             <atomic-facet-manager>
                 <atomic-facet field="author" label="Authors"></atomic-facet>
-                <atomic-result-list fields-to-include="filetype"> 
+                <atomic-result-list fields-to-include="filetype">
                     <atomic-result-template id="demoTemplate">
-                      <template>
-                        <div id="title">
-                          <a href="https://tolunaykatirci.github.io/gdtm/third.html"><h3>Third Page</h3></a>
-                        </div>
-                        <div>
-                          <atomic-result-value value="excerpt"></atomic-result-value>
-                        </div>
-                        <div id="type">
-                          <atomic-result-value value="filetype"></atomic-result-value>
-                        </div>
-                      </template>
+                        <template>
+                            <div id="title">
+                                <a href="https://tolunaykatirci.github.io/gdtm/third.html">
+                                    <h3>Third Page</h3>
+                                </a>
+                            </div>
+                            <div>
+                                <atomic-result-value value="excerpt"></atomic-result-value>
+                            </div>
+                            <div id="type">
+                                <atomic-result-value value="filetype"></atomic-result-value>
+                            </div>
+                        </template>
                     </atomic-result-template>
-                  </atomic-result-list>
-                <!-- ... -->
+                </atomic-result-list>
             </atomic-facet-manager>
 
-
-            
-            <!-- ... -->
         </atomic-search-interface>
     </div>
- 
 
-  
 
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    <a style="margin-top: 100px;" href="./second.html">Second</a>
+    </br>
+    <a href="./third.html">Third</a>
+    </br>
 
 
 
@@ -185,22 +209,22 @@
 
 
 
-    <script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script>
-    <script>
-    var CludoSearch;
-    (function () {
-        var cludoSettings = {
-            customerId: 2921,
-            engineId: 12553,
-            language: 'en',
-            searchInputs: ['cludo-search-form'],
-            type: 'standardOverlayWithDynamicSearchBox',
-            theme: { searchBoxPosition: {align: 'right', x: 20, y: 20} },
-        };
-        CludoSearch = new Cludo(cludoSettings);
-        CludoSearch.init();
-    })();
-    </script>
+    <!--script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script-->
+    <!--script>
+        var CludoSearch;
+        (function () {
+            var cludoSettings = {
+                customerId: 2921,
+                engineId: 12553,
+                language: 'en',
+                searchInputs: ['cludo-search-form'],
+                type: 'standardOverlayWithDynamicSearchBox',
+                theme: { searchBoxPosition: { align: 'right', x: 20, y: 20 } },
+            };
+            CludoSearch = new Cludo(cludoSettings);
+            CludoSearch.init();
+        })();
+    </script-->
     <!--[if lte IE 9]>
         <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
     <![endif]-->
@@ -217,23 +241,17 @@
     <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
 <![endif]-->
     <!-- End Google Tag Manager (noscript) -->
-    <a href="./second.html">Second</a>
-    </br>
-    <a href="./third.html">Third</a>
-    </br>
 
 <!--Gorgias Chat Widget Start-->
 <script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12680"></script>
 <!--Gorgias Chat Widget End-->
 
-    <!--Gorgias Chat Widget Start-->
-    <!--script id="gorgias-chat-widget-install-v2"
-        src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12595"></script-->
-    <!--Gorgias Chat Widget End-->
+</body>
 
-    <footer>
-        <!--script
+
+<footer>
+    <!--script
         type="text/javascript">!function () { var b = function () { window.__AudioEyeSiteHash = "a07e6e12035796cb99b9cf81881ceb9f"; var a = document.createElement("script"); a.src = "https://wsmcdn.audioeye.com/aem.js"; a.type = "text/javascript"; a.setAttribute("async", ""); document.getElementsByTagName("body")[0].appendChild(a) }; "complete" !== document.readyState ? window.addEventListener ? window.addEventListener("load", b) : window.attachEvent && window.attachEvent("onload", b) : b() }();</script-->
-    </footer>
+</footer>
 
 </html>

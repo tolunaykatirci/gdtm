@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -9,12 +10,40 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 
-    <link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css" rel="stylesheet">
 
 
-       
 </head>
-<body>
+<script src="js/CoveoJsSearch.js"></script>
+<script src="js/templates/templates.js"></script>
+
+<body id="search" class='CoveoSearchInterface'>
     Third page!!
+    <!-- Include the library scripts. -->
+    
+
+    <!-- Each DOM element with a class starting with "Coveo" (uppercase) will instantiate a component. -->
+
+    <!-- Each DOM element with a class starting with "coveo-" (lowercase) is strictly for CSS/alignment purpose. -->
+    <div class='coveo-search-section'>
+
+        <!-- Any Coveo component can be removed (or added); none is actually required for the page to "load". -->
+        <div class="CoveoSearchbox"></div>
+    </div>
+
+    <!-- The "data-" attributes of each component allow you to pass options to this specific component instance. -->
+    <div class="CoveoFacet" data-title="Author" data-field="@author" data-tab="All"></div>
+    <div class="CoveoFacet" data-title="Year" data-field="@year" data-tab="All"></div>
+    <script>
+        // The following line shows you how you could configure an endpoint against which to perform your search.
+        // Coveo.SearchEndpoint.configureCloudEndpoint('MyCoveoCloudEnpointName', 'my-authentification-token');
+
+        // We provide a sample endpoint with public sources for demo purposes.
+        Coveo.SearchEndpoint.configureSampleEndpoint();
+
+        // Initialize the framework by targeting the root in the interface.
+        // It does not have to be the document body.
+        Coveo.init(document.body);
+    </script>
 </body>
+
 </html>
