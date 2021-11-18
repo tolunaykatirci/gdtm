@@ -8,11 +8,14 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TQC4KZ9');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TQC4KZ9');</script>
     <!-- End Google Tag Manager -->
     <!--link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css"
         rel="stylesheet"-->
@@ -53,27 +56,29 @@
         src="https://platform.cloud.coveo.com/rest/organizations/mycoveoorganization/pages/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/inappwidget/loader?access_token=xx0837b011-f02b-464b-9bef-9ec87a3a9dd8"
         async></script-->
     <!-- End Coveo In-Product Experience -->
- 
+
 
 </head>
 
 <style>
     .interface-container {
-      width: 100%;
-      max-width: 1250px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 25% 1fr;
-      gap: 20px;
+        width: 100%;
+        max-width: 1250px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 25% 1fr;
+        gap: 20px;
     }
+
     .search-box-item {
-      grid-column-start: 2;
+        grid-column-start: 2;
     }
+
     .footer-item {
-      grid-column-start: 2;
-      grid-row-start: 3;
+        grid-column-start: 2;
+        grid-row-start: 3;
     }
-  </style>
+</style>
 
 <style>
     atomic-result::part(result-printable-uri-list-element) {
@@ -87,18 +92,47 @@
 
 <style>
     atomic-facet-manager {
-      padding-top: 13px;
+        padding-top: 13px;
     }
+
     atomic-result-list {
-      display: block;
-      margin-top: 10px;
+        display: block;
+        margin-top: 10px;
     }
-  </style>
+</style>
 
 <!-- Each DOM element with a class starting with "Coveo" (uppercase) will instantiate a component. -->
 
-<body>
-    <div style="background-color: violet;width:max-content; height: 100px;">
+<body id="search" class='CoveoSearchInterface'>
+        Third page!!
+        <!-- Include the library scripts. -->
+        
+    
+        <!-- Each DOM element with a class starting with "Coveo" (uppercase) will instantiate a component. -->
+    
+        <!-- Each DOM element with a class starting with "coveo-" (lowercase) is strictly for CSS/alignment purpose. -->
+        <div class='coveo-search-section'>
+    
+            <!-- Any Coveo component can be removed (or added); none is actually required for the page to "load". -->
+            <div class="CoveoSearchbox"></div>
+        </div>
+    
+        <!-- The "data-" attributes of each component allow you to pass options to this specific component instance. -->
+        <div class="CoveoFacet" data-title="Author" data-field="@author" data-tab="All"></div>
+        <div class="CoveoFacet" data-title="Year" data-field="@year" data-tab="All"></div>
+        <script>
+            // The following line shows you how you could configure an endpoint against which to perform your search.
+            // Coveo.SearchEndpoint.configureCloudEndpoint('MyCoveoCloudEnpointName', 'my-authentification-token');
+    
+            // We provide a sample endpoint with public sources for demo purposes.
+            Coveo.SearchEndpoint.configureSampleEndpoint();
+    
+            // Initialize the framework by targeting the root in the interface.
+            // It does not have to be the document body.
+            Coveo.init(document.body);
+        </script>
+
+    <!--div style="background-color: violet;width:max-content; height: 100px;">
         <atomic-search-interface id="search">
             <atomic-search-box></atomic-search-box>
             <atomic-facet-manager>
@@ -118,20 +152,10 @@
                       </template>
                     </atomic-result-template>
                   </atomic-result-list>
-                <!-- ... -->
-            </atomic-facet-manager>
-
-
-            
-            <!-- ... -->
+                </atomic-facet-manager>
+     
         </atomic-search-interface>
-    </div>
- 
-
-  
-
-
-
+    </div-->
 
 
     <!--form id="cludo-search-form" role="search">
@@ -190,25 +214,25 @@
     </script-->
 
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQC4KZ9"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQC4KZ9" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script>
     <script>
-    var CludoSearch;
-    (function () {
-        var cludoSettings = {
-            customerId: 2921,
-            engineId: 12553,
-            language: 'en',
-            searchInputs: ['cludo-search-form'],
-            type: 'standardOverlayWithDynamicSearchBox',
-            theme: { searchBoxPosition: {align: 'right', x: 20, y: 20} },
-        };
-        CludoSearch = new Cludo(cludoSettings);
-        CludoSearch.init();
-    })();
+        var CludoSearch;
+        (function () {
+            var cludoSettings = {
+                customerId: 2921,
+                engineId: 12553,
+                language: 'en',
+                searchInputs: ['cludo-search-form'],
+                type: 'standardOverlayWithDynamicSearchBox',
+                theme: { searchBoxPosition: { align: 'right', x: 20, y: 20 } },
+            };
+            CludoSearch = new Cludo(cludoSettings);
+            CludoSearch.init();
+        })();
     </script>
     <!--[if lte IE 9]>
         <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
@@ -232,17 +256,18 @@
     </br>
 
     <!--Gorgias Chat Widget Start-->
-    <script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12680"></script>
+    <script id="gorgias-chat-widget-install-v2"
+        src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12680"></script>
     <!--Gorgias Chat Widget End-->
 
     <!--Gorgias Chat Widget Start-->
     <!--script id="gorgias-chat-widget-install-v2"
         src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12595"></script-->
     <!--Gorgias Chat Widget End-->
-
-    <footer>
-        <!--script
+</body>
+<footer>
+    <!--script
         type="text/javascript">!function () { var b = function () { window.__AudioEyeSiteHash = "a07e6e12035796cb99b9cf81881ceb9f"; var a = document.createElement("script"); a.src = "https://wsmcdn.audioeye.com/aem.js"; a.type = "text/javascript"; a.setAttribute("async", ""); document.getElementsByTagName("body")[0].appendChild(a) }; "complete" !== document.readyState ? window.addEventListener ? window.addEventListener("load", b) : window.attachEvent && window.attachEvent("onload", b) : b() }();</script-->
-    </footer>
+</footer>
 
 </html>
