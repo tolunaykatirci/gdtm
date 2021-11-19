@@ -10,7 +10,19 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 
+    <script>
+        (function(c,o,v,e,O,u,a){
+        a='coveoua';c[a]=c[a]||function(){(c[a].q=c[a].q|| []).push(arguments)};
+        c[a].t=Date.now();u=o.createElement(v);u.async=1;u.src=e;
+        O=o.getElementsByTagName(v)[0];O.parentNode.insertBefore(u,O)
+        })(window,document,'script','https://static.cloud.coveo.com/coveo.analytics.js/2/coveoua.js')
+        coveoua('init', "xx0837b011-f02b-464b-9bef-9ec87a3a9dd8", "https://analytics-eu.cloud.coveo.com/rest/ua");
+        coveoua('send', 'pageview');
 
+        coveoua('send', 'pageview', {
+         page: '/second.html'
+        })
+    </script>
 
 </head>
 
