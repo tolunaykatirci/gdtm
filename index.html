@@ -7,13 +7,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
-
-
     <!--link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css"
         rel="stylesheet"-->
-
-
-
+    <script src="js/CoveoJsSearch.js"></script>
     <link rel="stylesheet" href="./css/CoveoFullSearch.css" />
     <script class="coveo-script" src="js/CoveoJsSearch.Lazy.js"></script>
     <script>
@@ -106,7 +102,19 @@
 <body>
 
 
-    <div style="height: 55px;">
+    <!-- ... -->
+    <!-- The CoveoRecommendation component is a CoveoSearchInterface -->
+    <!-- that displays recommendations. -->
+    <div id="coveoFrequentlyBoughtTogetherRecommendations" class="CoveoRecommendation"
+        data-pipeline="MyFrequentBoughtPipeline">
+        <div class="coveo-recommendation-body">
+            <div class="CoveoResultList">
+                <!-- ... -->
+            </div>
+        </div>
+    </div>
+
+    <!--div style="height: 55px;">
         <atomic-search-interface id="search">
             <atomic-search-box></atomic-search-box>
             <atomic-facet-manager>
@@ -131,7 +139,7 @@
             </atomic-facet-manager>
 
         </atomic-search-interface>
-    </div>
+    </div-->
 
 
     </br>
