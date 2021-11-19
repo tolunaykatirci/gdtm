@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Damla Cludo Page</title>
+    <title>Damla Cludo Test</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <form id="cludo-search-form" role="search">
+        <input type="search" class="search-input" aria-label="Search" aria-describedby="autocomplete_hint">
+        <button type="submit" class="search-button" id="search-button">Search</button>
+    </form>
+
+    <script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script>
+    <script>
+        var CludoSearch;
+        (function () {
+            var cludoSettings = {
+                customerId: 2921,
+                engineId: 12552,
+                searchUrl: 'https://tolunaykatirci.github.io/gdtm/',
+                language: 'en',
+                searchInputs: ['cludo-search-form'],
+                template: 'InlineBasic',
+                hideSearchFilters: true,
+                focusOnResultsAfterSearch: true,
+                type: 'inline'
+            };
+            CludoSearch = new Cludo(cludoSettings);
+            CludoSearch.init();
+        })();
+    </script>
+    <!--[if lte IE 9]>
+    <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
+<![endif]-->
+
+
+
+
+    <!--script type="text/javascript">
+
+        (function (c, l, u, d, o) {
+
+            var ele = document.createElement('script');
+
+            m = document.getElementsByTagName('script')[0];
+
+            ele.async = 1;
+
+            ele.src = 'https://customer.cludo.com/scripts/bundles/analytics/1.0.3/cludo-statistics.app.js';;
+
+            ele.onload = function () {
+
+                CludoSearch.initialize(c, l);
+
+            };
+
+            m.parentNode.insertBefore(ele, m);
+
+        })(2921, 12552);
+
+    </script-->
+
+
+
+    <!--script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script-->
+    <!--script>
+        var CludoSearch;
+        (function () {
+            var cludoSettings = {
+                customerId: 2921,
+                engineId: 12553,
+                language: 'en',
+                searchInputs: ['cludo-search-form'],
+                type: 'standardOverlayWithDynamicSearchBox',
+                theme: { searchBoxPosition: { align: 'right', x: 20, y: 20 } },
+            };
+            CludoSearch = new Cludo(cludoSettings);
+            CludoSearch.init();
+        })();
+    </script-->
+    <!--[if lte IE 9]>
+        <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
+    <![endif]-->
+    <!--[if lte IE 9]>
+        <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
+    <![endif]-->
+    <!--[if lte IE 9]>
+    <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
+<![endif]-->
+
+
+
+    <!--[if lte IE 9]>
+    <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
+<![endif]-->
+</body>
+
+</html>
