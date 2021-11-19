@@ -8,10 +8,41 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
 
-
-    <!-- End Google Tag Manager -->
+  
     <!--link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css"
         rel="stylesheet"-->
+
+
+
+
+
+<meta name="productid" content="123">
+<link rel="stylesheet" href="./css/CoveoFullSearch.css" />
+<script class="coveo-script" src="js/CoveoJsSearch.Lazy.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // The product id is retrieved.
+    // You may replace this with your own method of retrieval.
+    const productId = document.querySelector('meta[name="productid"]').content;
+    // The search endpoint is configured here with the itemId parameter
+    // because it leverages the Frequently bought together strategy.
+    Coveo.SearchEndpoint.configureCloudV2Endpoint(
+      "huawei_org_id",
+      "xx0837b011-f02b-464b-9bef-9ec87a3a9dd8",
+      "https://platform.cloud.coveo.com/rest/search",
+      {
+        "queryStringArguments": {
+          "mlParameters": {
+            "itemId": productId
+          }
+        }
+      }
+    )
+    const root = document.getElementById('coveoFrequentlyBoughtTogetherRecommendations');
+    // The framework is initialized with a recommendation interface.
+    Coveo.initRecommendation(root);
+  })
+</script>
 
 
     <!--script class="coveo-script"
@@ -33,14 +64,7 @@
         async></script-->
     <!-- End Coveo In-Product Experience -->
 
-    <script>
-        (function (c, o, v, e, O, u, a) {
-            a = 'coveoua'; c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            c[a].t = Date.now(); u = o.createElement(v); u.async = 1; u.src = e;
-            O = o.getElementsByTagName(v)[0]; O.parentNode.insertBefore(u, O)
-        })(window, document, 'script', 'https://static.cloud.coveo.com/coveo.analytics.js/2/coveoua.js')
-        coveoua('init', "xx0837b011-f02b-464b-9bef-9ec87a3a9dd8");
-    </script>
+
 </head>
 
 <style>
@@ -85,6 +109,32 @@
 <body>
 
 
+    <div style="height: 55px;">
+        <atomic-search-interface id="search">
+            <atomic-search-box></atomic-search-box>
+            <atomic-facet-manager>
+                <atomic-facet field="author" label="Authors"></atomic-facet>
+                <atomic-result-list fields-to-include="filetype">
+                    <atomic-result-template id="demoTemplate">
+                        <template>
+                            <div id="title">
+                                <a href="https://tolunaykatirci.github.io/gdtm/third.html">
+                                    <h3>Third Page</h3>
+                                </a>
+                            </div>
+                            <div>
+                                <atomic-result-value value="excerpt"></atomic-result-value>
+                            </div>
+                            <div id="type">
+                                <atomic-result-value value="filetype"></atomic-result-value>
+                            </div>
+                        </template>
+                    </atomic-result-template>
+                </atomic-result-list>
+            </atomic-facet-manager>
+
+        </atomic-search-interface>
+    </div>
 
 
     </br>
@@ -198,10 +248,9 @@
 <![endif]-->
     <!-- End Google Tag Manager (noscript) -->
 
-    <!--Gorgias Chat Widget Start-->
-    <script id="gorgias-chat-widget-install-v2"
-        src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12680"></script>
-    <!--Gorgias Chat Widget End-->
+<!--Gorgias Chat Widget Start-->
+<script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12680"></script>
+<!--Gorgias Chat Widget End-->
 
 </body>
 
