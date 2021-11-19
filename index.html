@@ -10,25 +10,39 @@
     <!-- <script
         src="https://firebasestorage.googleapis.com/v0/b/ideta-prod.appspot.com/o/bots%2F-MnjdDELPz22FhBNl3A2%2Fscripts%2Fintegration-web.js?alt=media&token=39b9efb4-5efb-4ea9-92d0-19dd0540a0f0"
         type="text/javascript" async></script> -->
+    <!--link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css"
+        rel="stylesheet"-->
 
-    <!--script class="coveo-script"
-        src="https://static.cloud.coveo.com/searchui/v2.10090/js/CoveoJsSearch.Lazy.min.js"></script>
-    <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.10090/css/CoveoFullSearch.css" />
-    <script src="https://static.cloud.coveo.com/searchui/v2.10090/js/templates/templates.js"></script>
+    <script type="module" src="https://static.cloud.coveo.com/atomic/latest/atomic.esm.js"></script>
+    <meta name="productid" content="123">
+    <link rel="stylesheet" href="./css/CoveoFullSearch.css" />
+    <script class="coveo-script" src="js/CoveoJsSearch.Lazy.js"></script>
+   
+
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
+        document.addEventListener('DOMContentLoaded', function () {
+            // The product id is retrieved.
+            // You may replace this with your own method of retrieval.
+            // The search endpoint is configured here with the itemId parameter
+            // because it leverages the Frequently bought together strategy.
             Coveo.SearchEndpoint.configureCloudV2Endpoint(
-                "mycoveoorganization",
-                "xx0837b011-f02b-464b-9bef-9ec87a3a9dd8"
-            );
-            Coveo.init(document.getElementById("search"));
+                "huawei_org_id",
+                "xx0837b011-f02b-464b-9bef-9ec87a3a9dd8",
+                "https://platform.cloud.coveo.com/rest/search",
+                {
+                    "queryStringArguments": {
+                        "mlParameters": {
+                            "itemId": "123"
+                        }
+                    }
+                }
+            )
+            const root = document.getElementById('coveoFrequentlyBoughtTogetherRecommendations');
+            // The framework is initialized with a recommendation interface.
+            Coveo.initRecommendation(root);
         })
-    </script-->
+    </script>
 
-    <!--script type="text/javascript"
-        src="https://platform.cloud.coveo.com/rest/organizations/mycoveoorganization/pages/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/inappwidget/loader?access_token=xx0837b011-f02b-464b-9bef-9ec87a3a9dd8"
-        async></script-->
-    <!-- End Coveo In-Product Experience -->
 
 <script>
 (function(c,o,v,e,O,u,a){
@@ -42,10 +56,234 @@ coveoua('init', "xx0837b011-f02b-464b-9bef-9ec87a3a9dd8");
 </head>
 
 <script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12474"></script> 
+    <script>
+            (async () => {
+                await customElements.whenDefined('atomic-search-interface');
+                const searchInterface = document.querySelector('#search');
+                await searchInterface.initialize({
+                    accessToken: 'xxac1f89d1-e7af-4022-ac1a-79795246a0b7',
+                    organizationId: 'hu_org_id'
+                });
+                searchInterface.executeFirstSearch();
+            })();
+    </script>
+
+
+</head>
+
+
+
+
+
+
+
+
+<style>
+    .interface-container {
+        display: grid;
+        gap: 20px;
+    }
+
+    .search-box-item {
+        grid-column-start: 2;
+    }
+
+    .footer-item {
+        grid-column-start: 2;
+        grid-row-start: 3;
+    }
+</style>
+
+<style>
+    atomic-result::part(result-printable-uri-list-element) {
+        text-transform: capitalize;
+    }
+
+    atomic-search-box::part(submit-button) {
+        background-color: orangered;
+    }
+</style>
+
+<style>
+    atomic-facet-manager {
+        padding-top: 13px;
+    }
+
+    atomic-result-list {
+        display: block;
+        margin-top: 10px;
+    }
+</style>
+
+<!-- Each DOM element with a class starting with "Coveo" (uppercase) will instantiate a component. -->
+
+<body>
+
+    <!-- ... -->
+    <!-- The CoveoRecommendation component is a CoveoSearchInterface -->
+    <!-- that displays recommendations. -->
+    <div id="coveoFrequentlyBoughtTogetherRecommendations" class="CoveoRecommendation"
+        data-pipeline="MyFrequentBoughtPipeline">
+        <div class="coveo-recommendation-body">
+            <div class="CoveoResultList">
+                <!-- ... -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--coveo search-->
+    <div style="height: 55px;">
+        <atomic-search-interface id="search">
+            <atomic-search-box></atomic-search-box>
+            <atomic-facet-manager>
+                <atomic-facet field="author" label="Authors"></atomic-facet>
+                <atomic-result-list fields-to-include="filetype">
+                    <atomic-result-template id="demoTemplate">
+                        <template>
+                            <div id="title">
+                                <a href="https://tolunaykatirci.github.io/gdtm/third.html">
+                                    <h3>Third Page</h3>
+                                </a>
+                            </div>
+                            <div>
+                                <atomic-result-value value="excerpt"></atomic-result-value>
+                            </div>
+                            <div id="type">
+                                <atomic-result-value value="filetype"></atomic-result-value>
+                            </div>
+                        </template>
+                    </atomic-result-template>
+                </atomic-result-list>
+            </atomic-facet-manager>
+
+        </atomic-search-interface>
+    </div>
+
+
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    <a style="margin-top: 100px;" href="./second.html">Second</a>
+    </br>
+    <a href="./third.html">Third</a>
+    </br>
+
+
+
+
+    <!--form id="cludo-search-form" role="search">
+        <input type="search" class="search-input" aria-label="Search" aria-describedby="autocomplete_hint">
+        <button type="submit" class="search-button" id="search-button">Search</button>
+    </form-->
+
+    <!--script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script-->
+    <!--script>
+        var CludoSearch;
+        (function () {
+            var cludoSettings = {
+                customerId: 2921,
+                engineId: 12552,
+                searchUrl: 'https://tolunaykatirci.github.io/gdtm/',
+                language: 'en',
+                searchInputs: ['cludo-search-form'],
+                template: 'InlineBasic',
+                hideSearchFilters: true,
+                focusOnResultsAfterSearch: true,
+                type: 'inline'
+            };
+            CludoSearch = new Cludo(cludoSettings);
+            CludoSearch.init();
+        })();
+    </script-->
+    <!--[if lte IE 9]>
+    <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
+<![endif]-->
+
+
+
+
+    <!--script type="text/javascript">
+
+        (function (c, l, u, d, o) {
+
+            var ele = document.createElement('script');
+
+            m = document.getElementsByTagName('script')[0];
+
+            ele.async = 1;
+
+            ele.src = 'https://customer.cludo.com/scripts/bundles/analytics/1.0.3/cludo-statistics.app.js';;
+
+            ele.onload = function () {
+
+                CludoSearch.initialize(c, l);
+
+            };
+
+            m.parentNode.insertBefore(ele, m);
+
+        })(2921, 12552);
+
+    </script-->
+
+
+
+    <!--script type="text/javascript" src="https://customer.cludo.com/scripts/bundles/search-script.min.js"></script-->
+    <!--script>
+        var CludoSearch;
+        (function () {
+            var cludoSettings = {
+                customerId: 2921,
+                engineId: 12553,
+                language: 'en',
+                searchInputs: ['cludo-search-form'],
+                type: 'standardOverlayWithDynamicSearchBox',
+                theme: { searchBoxPosition: { align: 'right', x: 20, y: 20 } },
+            };
+            CludoSearch = new Cludo(cludoSettings);
+            CludoSearch.init();
+        })();
+    </script-->
+    <!--[if lte IE 9]>
+        <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
+    <![endif]-->
+    <!--[if lte IE 9]>
+        <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
+    <![endif]-->
+    <!--[if lte IE 9]>
+    <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
+<![endif]-->
+
+
+
+    <!--[if lte IE 9]>
+    <script src="https://api.cludo.com/scripts/xdomain.js" slave="https://api.cludo.com/proxy.html" type="text/javascript"></script>
+<![endif]-->
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!--Gorgias Chat Widget Start-->
+    <script id="gorgias-chat-widget-install-v2"
+        src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12680"></script>
+    <!--Gorgias Chat Widget End-->
 
 </body>
+
+
 <footer>
-    <script type="text/javascript">!function(){var b=function(){window.__AudioEyeSiteHash = "a07e6e12035796cb99b9cf81881ceb9f"; var a=document.createElement("script");a.src="https://wsmcdn.audioeye.com/aem.js";a.type="text/javascript";a.setAttribute("async","");document.getElementsByTagName("body")[0].appendChild(a)};"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",b):window.attachEvent&&window.attachEvent("onload",b):b()}();</script>
+    <!--script
+        type="text/javascript">!function () { var b = function () { window.__AudioEyeSiteHash = "a07e6e12035796cb99b9cf81881ceb9f"; var a = document.createElement("script"); a.src = "https://wsmcdn.audioeye.com/aem.js"; a.type = "text/javascript"; a.setAttribute("async", ""); document.getElementsByTagName("body")[0].appendChild(a) }; "complete" !== document.readyState ? window.addEventListener ? window.addEventListener("load", b) : window.attachEvent && window.attachEvent("onload", b) : b() }();</script-->
 </footer>
 
 </html>
