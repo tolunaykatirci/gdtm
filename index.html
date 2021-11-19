@@ -7,31 +7,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
-    <!-- <script
-        src="https://firebasestorage.googleapis.com/v0/b/ideta-prod.appspot.com/o/bots%2F-MnjdDELPz22FhBNl3A2%2Fscripts%2Fintegration-web.js?alt=media&token=39b9efb4-5efb-4ea9-92d0-19dd0540a0f0"
-        type="text/javascript" async></script> -->
     <!--link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css"
         rel="stylesheet"-->
 
-    <script type="module" src="https://static.cloud.coveo.com/atomic/latest/atomic.esm.js"></script>
-    <meta name="productid" content="123">
-  
-    <script class="coveo-script" src="js/CoveoJsSearch.Lazy.js"></script>
-
-</head>
-
-<script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12474"></script> 
-    <script>
-            (async () => {
-                await customElements.whenDefined('atomic-search-interface');
-                const searchInterface = document.querySelector('#search');
-                await searchInterface.initialize({
-                    accessToken: 'xxac1f89d1-e7af-4022-ac1a-79795246a0b7',
-                    organizationId: 'hu_org_id'
-                });
-                searchInterface.executeFirstSearch();
-            })();
-    </script>
 
 
 </head>
@@ -39,46 +17,6 @@
 
 
 
-
-
-
-
-<style>
-    .interface-container {
-        display: grid;
-        gap: 20px;
-    }
-
-    .search-box-item {
-        grid-column-start: 2;
-    }
-
-    .footer-item {
-        grid-column-start: 2;
-        grid-row-start: 3;
-    }
-</style>
-
-<style>
-    atomic-result::part(result-printable-uri-list-element) {
-        text-transform: capitalize;
-    }
-
-    atomic-search-box::part(submit-button) {
-        background-color: orangered;
-    }
-</style>
-
-<style>
-    atomic-facet-manager {
-        padding-top: 13px;
-    }
-
-    atomic-result-list {
-        display: block;
-        margin-top: 10px;
-    }
-</style>
 
 <!-- Each DOM element with a class starting with "Coveo" (uppercase) will instantiate a component. -->
 
@@ -87,58 +25,7 @@
     <!-- ... -->
     <!-- The CoveoRecommendation component is a CoveoSearchInterface -->
     <!-- that displays recommendations. -->
-    <div id="coveoFrequentlyBoughtTogetherRecommendations" class="CoveoRecommendation"
-        data-pipeline="MyFrequentBoughtPipeline">
-        <div class="coveo-recommendation-body">
-            <div class="CoveoResultList">
-                <!-- ... -->
-            </div>
-        </div>
-    </div>
 
-
-
-    <!--coveo search-->
-    <div style="height: 55px;">
-        <atomic-search-interface id="search">
-            <atomic-search-box></atomic-search-box>
-            <atomic-facet-manager>
-                <atomic-facet field="author" label="Authors"></atomic-facet>
-                <atomic-result-list fields-to-include="filetype">
-                    <atomic-result-template id="demoTemplate">
-                        <template>
-                            <div id="title">
-                                <a href="https://tolunaykatirci.github.io/gdtm/third.html">
-                                    <h3>Third Page</h3>
-                                </a>
-                            </div>
-                            <div>
-                                <atomic-result-value value="excerpt"></atomic-result-value>
-                            </div>
-                            <div id="type">
-                                <atomic-result-value value="filetype"></atomic-result-value>
-                            </div>
-                        </template>
-                    </atomic-result-template>
-                </atomic-result-list>
-            </atomic-facet-manager>
-
-        </atomic-search-interface>
-    </div>
-
-
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
-
-    </br>
-    </br>
-    </br>
-    </br>
-    </br>
     </br>
     <a style="margin-top: 100px;" href="./second.html">Second</a>
     </br>
@@ -238,10 +125,7 @@
 <![endif]-->
     <!-- End Google Tag Manager (noscript) -->
 
-    <!--Gorgias Chat Widget Start-->
-    <script id="gorgias-chat-widget-install-v2"
-        src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12680"></script>
-    <!--Gorgias Chat Widget End-->
+
 
 </body>
 

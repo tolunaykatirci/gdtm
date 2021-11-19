@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Damla page</title>
+    <title>Damla Test</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+
+    <script type="module" src="https://static.cloud.coveo.com/atomic/latest/atomic.esm.js"></script>
+    <meta name="productid" content="123">
+    <link rel="stylesheet" href="./css/CoveoFullSearch.css" />
+    <script class="coveo-script" src="js/CoveoJsSearch.Lazy.js"></script>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // The product id is retrieved.
+            // You may replace this with your own method of retrieval.
+            // The search endpoint is configured here with the itemId parameter
+            // because it leverages the Frequently bought together strategy.
+            Coveo.SearchEndpoint.configureCloudV2Endpoint(
+                "huawei_org_id",
+                "xx0837b011-f02b-464b-9bef-9ec87a3a9dd8",
+                "https://platform.cloud.coveo.com/rest/search",
+                {
+                    "queryStringArguments": {
+                        "mlParameters": {
+                            "itemId": "123"
+                        }
+                    }
+                }
+            )
+            const root = document.getElementById('coveoFrequentlyBoughtTogetherRecommendations');
+            // The framework is initialized with a recommendation interface.
+            Coveo.initRecommendation(root);
+        })
+    </script>
+
+
+    <script>
+            (async () => {
+                await customElements.whenDefined('atomic-search-interface');
+                const searchInterface = document.querySelector('#search');
+                await searchInterface.initialize({
+                    accessToken: 'xxac1f89d1-e7af-4022-ac1a-79795246a0b7',
+                    organizationId: 'hu_org_id'
+                });
+                searchInterface.executeFirstSearch();
+            })();
+    </script>
+
+</head>
+
+
+<style>
+    .interface-container {
+        display: grid;
+        gap: 20px;
+    }
+
+    .search-box-item {
+        grid-column-start: 2;
+    }
+
+    .footer-item {
+        grid-column-start: 2;
+        grid-row-start: 3;
+    }
+</style>
+
+<style>
+    atomic-result::part(result-printable-uri-list-element) {
+        text-transform: capitalize;
+    }
+
+    atomic-search-box::part(submit-button) {
+        background-color: orangered;
+    }
+</style>
+
+<style>
+    atomic-facet-manager {
+        padding-top: 13px;
+    }
+
+    atomic-result-list {
+        display: block;
+        margin-top: 10px;
+    }
+</style>
+
+
+<body>
+
+    <div id="coveoFrequentlyBoughtTogetherRecommendations" class="CoveoRecommendation"
+        data-pipeline="MyFrequentBoughtPipeline">
+        <div class="coveo-recommendation-body">
+            <div class="CoveoResultList">
+                <!-- ... -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--coveo search-->
+    <div style="height: 55px;">
+        <atomic-search-interface id="search">
+            <atomic-search-box></atomic-search-box>
+            <atomic-facet-manager>
+                <atomic-facet field="author" label="Authors"></atomic-facet>
+                <atomic-result-list fields-to-include="filetype">
+                    <atomic-result-template id="demoTemplate">
+                        <template>
+                            <div id="title">
+                                <a href="https://tolunaykatirci.github.io/gdtm/third.html">
+                                    <h3>Third Page</h3>
+                                </a>
+                            </div>
+                            <div>
+                                <atomic-result-value value="excerpt"></atomic-result-value>
+                            </div>
+                            <div id="type">
+                                <atomic-result-value value="filetype"></atomic-result-value>
+                            </div>
+                        </template>
+                    </atomic-result-template>
+                </atomic-result-list>
+            </atomic-facet-manager>
+
+        </atomic-search-interface>
+    </div>
+
+
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+</body>
+
+</html>
