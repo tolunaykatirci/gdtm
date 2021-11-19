@@ -8,41 +8,38 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
 
-  
+
     <!--link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css"
         rel="stylesheet"-->
 
 
 
-
-
-<meta name="productid" content="123">
-<link rel="stylesheet" href="./css/CoveoFullSearch.css" />
-<script class="coveo-script" src="js/CoveoJsSearch.Lazy.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // The product id is retrieved.
-    // You may replace this with your own method of retrieval.
-    const productId = document.querySelector('meta[name="productid"]').content;
-    // The search endpoint is configured here with the itemId parameter
-    // because it leverages the Frequently bought together strategy.
-    Coveo.SearchEndpoint.configureCloudV2Endpoint(
-      "huawei_org_id",
-      "xx0837b011-f02b-464b-9bef-9ec87a3a9dd8",
-      "https://platform.cloud.coveo.com/rest/search",
-      {
-        "queryStringArguments": {
-          "mlParameters": {
-            "itemId": productId
-          }
-        }
-      }
-    )
-    const root = document.getElementById('coveoFrequentlyBoughtTogetherRecommendations');
-    // The framework is initialized with a recommendation interface.
-    Coveo.initRecommendation(root);
-  })
-</script>
+    <link rel="stylesheet" href="./css/CoveoFullSearch.css" />
+    <script class="coveo-script" src="js/CoveoJsSearch.Lazy.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // The product id is retrieved.
+            // You may replace this with your own method of retrieval.
+            const productId = document.querySelector('meta[name="productid"]').content;
+            // The search endpoint is configured here with the itemId parameter
+            // because it leverages the Frequently bought together strategy.
+            Coveo.SearchEndpoint.configureCloudV2Endpoint(
+                "huawei_org_id",
+                "xx0837b011-f02b-464b-9bef-9ec87a3a9dd8",
+                "https://platform.cloud.coveo.com/rest/search",
+                {
+                    "queryStringArguments": {
+                        "mlParameters": {
+                            "itemId": "123"
+                        }
+                    }
+                }
+            )
+            const root = document.getElementById('coveoFrequentlyBoughtTogetherRecommendations');
+            // The framework is initialized with a recommendation interface.
+            Coveo.initRecommendation(root);
+        })
+    </script>
 
 
     <!--script class="coveo-script"
@@ -248,9 +245,10 @@
 <![endif]-->
     <!-- End Google Tag Manager (noscript) -->
 
-<!--Gorgias Chat Widget Start-->
-<script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12680"></script>
-<!--Gorgias Chat Widget End-->
+    <!--Gorgias Chat Widget Start-->
+    <script id="gorgias-chat-widget-install-v2"
+        src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12680"></script>
+    <!--Gorgias Chat Widget End-->
 
 </body>
 
