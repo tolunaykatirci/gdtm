@@ -9,15 +9,15 @@
 
     <!--link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css"
         rel="stylesheet"-->
-        
+
     <script type="module" src="https://static.cloud.coveo.com/atomic/latest/atomic.esm.js"></script>
     <link rel="stylesheet" href="./css/CoveoFullSearch.css" />
-  
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // The product id is retrieved.
             // You may replace this with your own method of retrieval.
-            const productId = document.querySelector('meta[name="productid"]').content;
+            const productId = document.querySelector('meta[name="123"]').content;
             // The search endpoint is configured here with the itemId parameter
             // because it leverages the Frequently bought together strategy.
             Coveo.SearchEndpoint.configureCloudV2Endpoint(
@@ -39,27 +39,27 @@
     </script>
 
 
-    <!--script class="coveo-script"
-        src="https://static.cloud.coveo.com/searchui/v2.10090/js/CoveoJsSearch.Lazy.min.js"></script>
-    <link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.10090/css/CoveoFullSearch.css" />
-    <script src="https://static.cloud.coveo.com/searchui/v2.10090/js/templates/templates.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            Coveo.SearchEndpoint.configureCloudV2Endpoint(
-                "mycoveoorganization",
-                "xx0837b011-f02b-464b-9bef-9ec87a3a9dd8"
-            );
-            Coveo.init(document.getElementById("search"));
-        })
-    </script-->
-
-    <!--script type="text/javascript"
-        src="https://platform.cloud.coveo.com/rest/organizations/mycoveoorganization/pages/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/inappwidget/loader?access_token=xx0837b011-f02b-464b-9bef-9ec87a3a9dd8"
-        async></script-->
-    <!-- End Coveo In-Product Experience -->
+            (async () => {
+                await customElements.whenDefined('atomic-search-interface');
+                const searchInterface = document.querySelector('#search');
+                await searchInterface.initialize({
+                    accessToken: 'xxac1f89d1-e7af-4022-ac1a-79795246a0b7',
+                    organizationId: 'hu_org_id'
+                });
+                searchInterface.executeFirstSearch();
+            })();
+    </script>
 
 
 </head>
+
+
+
+
+
+
+
 
 <style>
     .interface-container {
@@ -102,7 +102,6 @@
 
 <body>
 
-
     <!-- ... -->
     <!-- The CoveoRecommendation component is a CoveoSearchInterface -->
     <!-- that displays recommendations. -->
@@ -115,7 +114,10 @@
         </div>
     </div>
 
-    <!--div style="height: 55px;">
+
+
+    <!--coveo search-->
+    <div style="height: 55px;">
         <atomic-search-interface id="search">
             <atomic-search-box></atomic-search-box>
             <atomic-facet-manager>
@@ -140,7 +142,7 @@
             </atomic-facet-manager>
 
         </atomic-search-interface>
-    </div-->
+    </div>
 
 
     </br>
