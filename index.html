@@ -8,35 +8,10 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
 
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-TQC4KZ9');</script>
+
     <!-- End Google Tag Manager -->
     <!--link href="https://customer.cludo.com/css/templates/v2.1/essentials/cludo-search.min.css" type="text/css"
         rel="stylesheet"-->
-
-
-    <script type="module" src="https://static.cloud.coveo.com/atomic/latest/atomic.esm.js"></script>
-    <link rel="stylesheet" href="https://static.cloud.coveo.com/atomic/latest/themes/coveo.css" />
-
-
-    <script>
-        (async () => {
-            await customElements.whenDefined('atomic-search-interface');
-            const searchInterface = document.querySelector('#search');
-            await searchInterface.initialize({
-                accessToken: 'xxac1f89d1-e7af-4022-ac1a-79795246a0b7',
-                organizationId: 'hu_org_id'
-            });
-            searchInterface.executeFirstSearch();
-        })();
-    </script>
 
 
     <!--script class="coveo-script"
@@ -58,7 +33,14 @@
         async></script-->
     <!-- End Coveo In-Product Experience -->
 
-
+    <script>
+        (function (c, o, v, e, O, u, a) {
+            a = 'coveoua'; c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            c[a].t = Date.now(); u = o.createElement(v); u.async = 1; u.src = e;
+            O = o.getElementsByTagName(v)[0]; O.parentNode.insertBefore(u, O)
+        })(window, document, 'script', 'https://static.cloud.coveo.com/coveo.analytics.js/2/coveoua.js')
+        coveoua('init', "xx0837b011-f02b-464b-9bef-9ec87a3a9dd8");
+    </script>
 </head>
 
 <style>
@@ -103,32 +85,6 @@
 <body>
 
 
-    <div style="height: 55px;">
-        <atomic-search-interface id="search">
-            <atomic-search-box></atomic-search-box>
-            <atomic-facet-manager>
-                <atomic-facet field="author" label="Authors"></atomic-facet>
-                <atomic-result-list fields-to-include="filetype">
-                    <atomic-result-template id="demoTemplate">
-                        <template>
-                            <div id="title">
-                                <a href="https://tolunaykatirci.github.io/gdtm/third.html">
-                                    <h3>Third Page</h3>
-                                </a>
-                            </div>
-                            <div>
-                                <atomic-result-value value="excerpt"></atomic-result-value>
-                            </div>
-                            <div id="type">
-                                <atomic-result-value value="filetype"></atomic-result-value>
-                            </div>
-                        </template>
-                    </atomic-result-template>
-                </atomic-result-list>
-            </atomic-facet-manager>
-
-        </atomic-search-interface>
-    </div>
 
 
     </br>
@@ -242,9 +198,10 @@
 <![endif]-->
     <!-- End Google Tag Manager (noscript) -->
 
-<!--Gorgias Chat Widget Start-->
-<script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12680"></script>
-<!--Gorgias Chat Widget End-->
+    <!--Gorgias Chat Widget Start-->
+    <script id="gorgias-chat-widget-install-v2"
+        src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=12680"></script>
+    <!--Gorgias Chat Widget End-->
 
 </body>
 
